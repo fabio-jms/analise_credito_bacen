@@ -1,34 +1,52 @@
 import os
+import time
 import pandas as pd
 import requests
 
-# 1. Definir o código da série do BACEN (20539 = Crédito total do sistema financeiro)
-codigo_serie = 20539
+# 1. Criar um dicionário com as séries de crédito que queremos baixar
+# O formato é: "Nome_do_Arquivo": Código_no_BACEN
+series_credito = {
+    "credito_total": 20539,
+    "credito_pessoa_fisica": 20540,
+    "credito_pessoa_juridica": 20541,
+    # Você pode adicionar novas séries aqui futuramente seguindo o mesmo padrão!
+}
 
-# 2. Criar uma pasta para os dados brutos (se ela já não existir)
+# 2. Garantir que a pasta de destino existe
 pasta_destino = "dados_brutos"
 if not os.path.exists(pasta_destino):
     os.makedirs(pasta_destino)
-    print(f"Pasta '{pasta_destino}' criada com sucesso!")
+    print(f"Pasta '{pasta_destino}' criada!")
 
-# 3. Construir a URL da API oficial do Banco Central
-url = f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.{codigo_serie}/dados?formato=json"
+print("Iniciando o download do lote de séries temporais...\n")
 
-print("Buscando dados no Banco Central... Por favor, aguarde.")
-resposta = requests.get(url)
+# 3. Criar um laço 'for' para repetir o processo para cada item do dicionário
+for nome_serie, codigo in series_credito.items():
+    print(f"Buscando {nome_serie} (Série {codigo})...")
+    
+    # Construir a URL para a série atual
+    url = f"https://api.bcb.gov.br/dados/serie/bcdata.sgs.{codigo}/dados?formato=json"
+    
+    try:
+        resposta = requests.get(url)
+        
+        if resposta.status_code == 200:
+            dados_json = resposta.json()
+            df = pd.DataFrame(dados_json)
+            
+            # Definir o caminho do arquivo usando o nome descritivo que demos
+            caminho_arquivo = os.path.join(pasta_destino, f"{nome_serie}.csv")
+            
+            # Salvar em CSV separado por ponto e vírgula
+            df.to_csv(caminho_arquivo, index=False, sep=";")
+            print(f"-> Sucesso! Salvo em: {caminho_arquivo} ({len(df)} registros encontrados)")
+        else:
+            print(f"-> Erro ao acessar a série {codigo}. Status: {resposta.status_code}")
+            
+    except Exception as e:
+        print(f"-> Ocorreu uma falha na requisição: {e}")
+    
+    # 4. Uma boa prática: esperar 1 segundo entre as requisições para não sobrecarregar o servidor deles
+    time.sleep(1)
 
-if resposta.status_code == 200:
-    dados_json = resposta.json()
-    df = pd.DataFrame(dados_json)
-    
-    # 4. Definir o nome do arquivo final (ex: dados_brutos/serie_20539.csv)
-    caminho_arquivo = os.path.join(pasta_destino, f"serie_{codigo_serie}.csv")
-    
-    # 5. Salvar a tabela em formato CSV
-    # index=False serve para o Pandas não criar uma coluna de numeração extra
-    df.to_csv(caminho_arquivo, index=False, sep=";")
-    
-    print(f"\n--- Dados salvos com sucesso em: {caminho_arquivo} ---")
-    print(df.tail(5))
-else:
-    print(f"Erro ao acessar a API. Código: {resposta.status_code}")
+print("\n--- Todos os downloads foram concluídos! ---")
