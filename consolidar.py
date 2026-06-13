@@ -104,11 +104,10 @@ for index, nome_arquivo in enumerate(arquivos):
     except Exception as e:
         print(f"  -> Erro ao processar o arquivo {nome_arquivo}: {e}")
 
-# 6. Salvar relatório final consolidado
+# 6. Salvar relatório final consolidado dinamicamente com a data da carga
 if dados_consolidados:
     df_final = pd.DataFrame(dados_consolidados)
     
-    # Reorganizar as colunas
     colunas_ordenadas = [
         "Código", "Classe", "Nome_Abreviado", "Nome_Completo_SGS", 
         "Ultima_Data", "Ultimo_Valor", "Var_Mensal_Pct", "Var_Anual_Pct", 
@@ -116,16 +115,30 @@ if dados_consolidados:
     ]
     df_final = df_final[colunas_ordenadas]
     
-    # --- PROPRIEDADES DA SALVA CORRIGIDAS ABAIXO ---
+    # --- LOGICA DE VERSIONAMENTO DINÂMICO ---
+    # 1. Pegamos a maior data encontrada na coluna Ultima_Data (formato original: DD/MM/AAAA)
+    # Convertemos temporariamente para o formato de data do Pandas para achar o valor máximo real
+    datas_convertidas = pd.to_datetime(df_final["Ultima_Data"], format="%d/%m/%Y")
+    maior_data = datas_convertidas.max()
+    
+    # 2. Formatamos essa maior data no padrão desejado: AAAAMM
+    sufixo_data = maior_data.strftime("%Y%m")
+    
+    # 3. Montamos o nome do arquivo final com o carimbo de data (ex: resumo_estatistico_credito_202606.csv)
+    arquivo_saida_dinamico = f"resumo_estatistico_credito_{sufixo_data}.csv"
+    
+    # 4. Salvamos a tabela com a formatação perfeita para o Excel
     df_final.to_csv(
-        arquivo_saida, 
+        arquivo_saida_dinamico, 
         index=False, 
         sep=";", 
-        encoding="utf-8-sig",  # Força o Excel a ler acentos perfeitamente
-        decimal=","            # Transforma pontos em vírgulas para o Excel entender como número
+        encoding="utf-8-sig", 
+        decimal=","
     )
     
     print("\n==================================================")
-    print(f"SUCESSO! Novo relatório gerado: {arquivo_saida}")
-    print(f"Todas as {len(df_final)} séries agora estão formatadas para o Excel PT-BR!")
+    print(f"SUCESSO! Relatório versionado gerado: {arquivo_saida_dinamico}")
+    print(f"Total de {len(df_final)} séries consolidadas com a foto de {maior_data.strftime('%m/%Y')}!")
     print("==================================================")
+else:
+    print("\nNenhum dado pôde ser consolidado.")
