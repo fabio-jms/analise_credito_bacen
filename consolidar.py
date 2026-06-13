@@ -3,38 +3,49 @@ import pandas as pd
 
 # 1. Configurações de caminhos
 pasta_dados = "dados_brutos"
+arquivo_planilha = "codigos_series_bacen.csv"
 arquivo_saida = "resumo_estatistico_credito.csv"
 
-# Verificar se a pasta de dados brutos existe
+# Verificar se os arquivos necessários existem
 if not os.path.exists(pasta_dados):
     print(f"Erro: A pasta '{pasta_dados}' não existe. Rode o 'main.py' primeiro!")
     exit()
 
-# 2. Listar todos os arquivos CSV que estão dentro da pasta dados_brutos
+if not os.path.exists(arquivo_planilha):
+    print(f"Erro: A planilha '{arquivo_planilha}' não foi encontrada na raiz!")
+    exit()
+
+# 2. Criar um mapeamento (Dicionário) do Código para o Nome Completo da série
+print(f"Carregando mapeamento de nomes a partir de: {arquivo_planilha}")
+df_referencia = pd.read_csv(arquivo_planilha, sep=";")
+df_referencia.columns = df_referencia.columns.str.strip()
+
+# Criamos um dicionário onde a CHAVE é o Código e o VALOR é o Nome Completo
+# Convertemos o CODIGO para string para evitar problemas de compatibilidade no mapeamento
+mapa_nomes_completos = dict(zip(df_referencia["CODIGO"].astype(str), df_referencia["NOME"]))
+
+
+# 3. Listar todos os arquivos CSV que estão dentro da pasta dados_brutos
 arquivos = [f for f in os.listdir(pasta_dados) if f.endswith(".csv")]
 
 if not arquivos:
     print(f"Aviso: Nenhum arquivo CSV encontrado dentro de '{pasta_dados}'.")
     exit()
 
-print(f"Encontrados {len(arquivos)} arquivos para processar. Iniciando consolidação...")
+print(f"Encontrados {len(arquivos)} arquivos. Iniciando consolidação com nomes completos...")
 
-# Lista onde guardaremos o dicionário de resumo de cada arquivo
 dados_consolidados = []
 
-# 3. Varrer arquivo por arquivo de forma automática
+# 4. Varrer arquivo por arquivo de forma automática
 for index, nome_arquivo in enumerate(arquivos):
     caminho_completo = os.path.join(pasta_dados, nome_arquivo)
     
     try:
-        # Ler o arquivo atual
         df = pd.read_csv(caminho_completo, sep=";")
         
-        # Pular arquivos que por acaso estejam vazios
         if df.empty or "valor" not in df.columns or "data" not in df.columns:
             continue
             
-        # Tratar os dados da coluna valor e data
         if df["valor"].dtype == "object":
             df["valor"] = df["valor"].str.replace(",", ".").astype(float)
         else:
@@ -43,34 +54,41 @@ for index, nome_arquivo in enumerate(arquivos):
         df["data"] = pd.to_datetime(df["data"], format="%d/%m/%Y")
         df = df.sort_values(by="data").reset_index(drop=True)
         
-        # Separar a Classe e o Nome_Abrev a partir do nome do arquivo (ex: Saldo_credito_pessoa_fisica.csv)
-        # O .replace(".csv", "") remove a extensão e o .split("_", 1) quebra no primeiro underline
+        # --- EXTRAIR O CÓDIGO A PARTIR DO NOVO PADRÃO DE NOME ---
+        # Exemplo: "ICC_27673_ICC_PF_CRDPESNAOCONSIGNADO.csv"
         nome_sem_extensao = nome_arquivo.replace(".csv", "")
-        partes = nome_sem_extensao.split("_", 1)
+        partes = nome_sem_extensao.split("_")
+        
+        # O código da série agora é a segunda parte (índice 1) devido à sua alteração!
+        codigo_serie_str = partes[1]
         classe = partes[0]
-        nome_abrev = partes[1] if len(partes) > 1 else nome_sem_extensao
+        nome_abrev = "_".join(partes[2:]) if len(partes) > 2 else nome_sem_extensao
 
-        # --- REPLICAR OS CÁLCULOS PARA CADA SÉRIE ---
+        # Buscar o Nome Completo no nosso mapa usando o código capturado
+        # O .get() serve para trazer um texto padrão caso o código não seja achado na planilha
+        nome_completo_serie = mapa_nomes_completos.get(codigo_serie_str, "Nome não encontrado na planilha")
+
+        # --- REPLICAR OS CÁLCULOS ---
         media_historica = df["valor"].mean()
         ultimo_valor = df["valor"].iloc[-1]
         ultima_data = df["data"].iloc[-1].strftime("%d/%m/%Y")
         
-        # Pico histórico
         id_maximo = df["valor"].idxmax()
         pico_valor = df["valor"].loc[id_maximo]
         pico_data = df["data"].loc[id_maximo].strftime("%d/%m/%Y")
         
-        # Variações percentuais (Mensal e Anual)
         df["var_mensal"] = df["valor"].pct_change() * 100
         df["var_anual"] = df["valor"].pct_change(periods=12) * 100
         
         ultima_var_mensal = df["var_mensal"].iloc[-1]
         ultima_var_anual = df["var_anual"].iloc[-1]
         
-        # 4. Guardar os indicadores calculados estruturados em um dicionário
+        # 5. Guardar os dados com a nova coluna de Nome Completo
         resumo_serie = {
+            "Código": codigo_serie_str,
             "Classe": classe,
             "Nome_Abreviado": nome_abrev,
+            "Nome_Completo_SGS": nome_completo_serie,  # <- Nova coluna estratégica!
             "Ultima_Data": ultima_data,
             "Ultimo_Valor": ultimo_valor,
             "Var_Mensal_Pct": ultima_var_mensal,
@@ -81,21 +99,33 @@ for index, nome_arquivo in enumerate(arquivos):
         }
         
         dados_consolidados.append(resumo_serie)
-        print(f"[{index + 1}/{len(arquivos)}] Processado com sucesso: {nome_arquivo}")
+        print(f"[{index + 1}/{len(arquivos)}] Mapeado e Processado: Série {codigo_serie_str}")
         
     except Exception as e:
         print(f"  -> Erro ao processar o arquivo {nome_arquivo}: {e}")
 
-# 5. Transformar a lista de resumos em uma tabela final do Pandas e salvar
+# 6. Salvar relatório final consolidado
 if dados_consolidados:
     df_final = pd.DataFrame(dados_consolidados)
     
-    # Salvamos usando ponto e vírgula (sep=";") porque o Excel em português abre direto de forma correta!
-    df_final.to_csv(arquivo_saida, index=False, sep=";")
+    # Reorganizar as colunas
+    colunas_ordenadas = [
+        "Código", "Classe", "Nome_Abreviado", "Nome_Completo_SGS", 
+        "Ultima_Data", "Ultimo_Valor", "Var_Mensal_Pct", "Var_Anual_Pct", 
+        "Media_Historica", "Pico_Valor", "Pico_Data"
+    ]
+    df_final = df_final[colunas_ordenadas]
+    
+    # --- PROPRIEDADES DA SALVA CORRIGIDAS ABAIXO ---
+    df_final.to_csv(
+        arquivo_saida, 
+        index=False, 
+        sep=";", 
+        encoding="utf-8-sig",  # Força o Excel a ler acentos perfeitamente
+        decimal=","            # Transforma pontos em vírgulas para o Excel entender como número
+    )
     
     print("\n==================================================")
-    print(f"SUCESSO! Relatório consolidado gerado: {arquivo_saida}")
-    print(f"Total de séries resumidas: {len(df_final)}")
+    print(f"SUCESSO! Novo relatório gerado: {arquivo_saida}")
+    print(f"Todas as {len(df_final)} séries agora estão formatadas para o Excel PT-BR!")
     print("==================================================")
-else:
-    print("\nNenhum dado pôde ser consolidado.")

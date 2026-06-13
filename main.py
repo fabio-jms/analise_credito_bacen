@@ -37,7 +37,7 @@ lista_falhas = []
 
 def executar_download_incremental(index, total, codigo, nome_arquivo, classe, tentativa=1):
     prefixo = f"Tentativa {tentativa}" if tentativa > 1 else f"{index + 1}/{total}"
-    caminho_final = os.path.join(pasta_destino, f"{classe}_{nome_arquivo}.csv")
+    caminho_final = os.path.join(pasta_destino, f"{classe}_{codigo}_{nome_arquivo}.csv")
 
     # 1. Determinar se faremos carga FULL ou INCREMENTAL
     arquivo_existe = os.path.exists(caminho_final)
