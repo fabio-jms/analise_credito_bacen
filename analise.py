@@ -2,91 +2,85 @@ import os
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# 1. Definir o caminho dos arquivos que baixamos
+# 1. Configurações de caminhos conforme as suas séries
 pasta_dados = "dados_brutos"
-arquivo_tt = os.path.join(pasta_dados, "Concessão_20631_CON_TOTAL.csv")
-arquivo_pf = os.path.join(pasta_dados, "Concessão_20633_CON_PF_TOTAL.csv")
-arquivo_pj = os.path.join(pasta_dados, "Concessão_20632_CON_PJ_TOTAL.csv")
+arquivo_tt = os.path.join(pasta_dados, "Saldo_20539_SALDO_TOTAL.csv")
+arquivo_pf = os.path.join(pasta_dados, "Saldo_20541_SALDO_PF_TOTAL.csv")
+arquivo_pj = os.path.join(pasta_dados, "Saldo_20540_SALDO_PJ_TOTAL.csv")
+arquivo_ipca = os.path.join(pasta_dados, "Indices_433_IPCA_MENSAL.csv")
 
-# 2. Ler os arquivos CSV usando o Pandas
-# Lembra que salvamos usando o separador ponto e vírgula (sep=";")? Precisamos avisar o Pandas aqui.
-df_tt = pd.read_csv(arquivo_tt, sep=";")
-df_pf = pd.read_csv(arquivo_pf, sep=";")
-df_pj = pd.read_csv(arquivo_pj, sep=";")
+# Verificar se todos os arquivos necessários existem
+arquivos_necessarios = [arquivo_tt, arquivo_pf, arquivo_pj, arquivo_ipca]
+for arq in arquivos_necessarios:
+    if not os.path.exists(arq):
+        print(f"Erro: O arquivo {arq} não foi encontrado. Verifique se o main.py já o baixou!")
+        exit()
 
-
-# 3. TRATAMENTO DOS DADOS (Essencial!)
-# O Banco Central nos envia os números com vírgula (ex: 1250,50) e o Python não entende isso como número, mas como texto.
-# Além disso, precisamos converter a coluna de data para o formato que o Python entende.
-def tratar_dados(df):
-    # 1. Verificar se a coluna 'valor' veio como texto (object/string)
+# 2. Função para ler e tratar os dados
+def ler_e_tratar(caminho):
+    df = pd.read_csv(caminho, sep=";")
     if df["valor"].dtype == "object":
-        # Se for texto, fazemos a substituição da vírgula por ponto
         df["valor"] = df["valor"].str.replace(",", ".").astype(float)
     else:
-        # Se já for número (int ou float), apenas garantimos que seja float
         df["valor"] = df["valor"].astype(float)
-
-    # 2. Transforma o texto da data em um objeto de data real do Python
     df["data"] = pd.to_datetime(df["data"], format="%d/%m/%Y")
+    return df.sort_values(by="data").reset_index(drop=True)
 
-    # 3. Filtrar para pegar apenas os dados de 2020 em diante
-    df = df[df["data"] >= "2020-01-01"]
+# 3. Carregar e estruturar o IPCA (Deflator)
+df_ipca = ler_e_tratar(arquivo_ipca)
+df_ipca = df_ipca.rename(columns={"valor": "ipca_mes_pct"})
+df_ipca["fator_mes"] = 1 + (df_ipca["ipca_mes_pct"] / 100)
 
-    return df
+# Acumular a inflação de trás para frente (trazendo para valor de hoje)
+df_ipca = df_ipca.sort_values(by="data", ascending=False).reset_index(drop=True)
+df_ipca["fator_acumulado"] = df_ipca["fator_mes"].cumprod()
+df_ipca["fator_acumulado"] = df_ipca["fator_acumulado"] / df_ipca["fator_mes"]
+df_ipca = df_ipca.sort_values(by="data").reset_index(drop=True)
 
+# 4. Função auxiliar para cruzar dados e deflacionar cada série
+def preparar_serie_deflacionada(caminho_serie):
+    df_serie = ler_e_tratar(caminho_serie)
+    # Cruzamento com a inflação
+    df_fused = pd.merge(df_serie, df_ipca[["data", "fator_acumulado"]], on="data", how="inner")
+    # Multiplica o nominal pelo fator para obter o valor real
+    df_fused["valor_deflacionado"] = df_fused["valor"] * df_fused["fator_acumulado"]
+    # Filtrar pós-2020 para o gráfico não ficar poluído
+    return df_fused[df_fused["data"] >= "2020-01-01"]
 
-# Aplicar o tratamento nas duas tabelas
-df_tt = tratar_dados(df_tt)
-df_pf = tratar_dados(df_pf)
-df_pj = tratar_dados(df_pj)
+# Processar as 3 séries de crédito
+df_tt = preparar_serie_deflacionada(arquivo_tt)
+df_pf = preparar_serie_deflacionada(arquivo_pf)
+df_pj = preparar_serie_deflacionada(arquivo_pj)
 
+# 5. CONSTRUÇÃO DO GRÁFICO MULTISSÉRIES
+plt.figure(figsize=(14, 7))
 
-# 4. CRIANDO O GRÁFICO
-# Definimos o tamanho da imagem (largura, altura)
-plt.figure(figsize=(12, 6))
+# Configuração de Cores Uniformes
+cor_tt = "#2ca02c" # Verde
+cor_pf = "#1f77b4" # Azul
+cor_pj = "#ff7f0e" # Laranja
 
-# Plotar a linha de Total (Eixo X = data, Eixo Y = valor)
-plt.plot(
-    df_tt["data"],
-    df_tt["valor"],
-    label="Crédito Total",
-    color="blue",
-    linewidth=2,
-)
+# --- SÉRIE TOTAL ---
+plt.plot(df_tt["data"], df_tt["valor_deflacionado"], label="Total (Real / Deflacionado)", color=cor_tt, linewidth=2.5)
+plt.plot(df_tt["data"], df_tt["valor"], label="Total (Nominal)", color=cor_tt, linestyle=":", linewidth=2, alpha=0.7)
 
-# Plotar a linha de Pessoa Física
-plt.plot(
-    df_pf["data"],
-    df_pf["valor"],
-    label="Crédito Pessoa Física (PF)",
-    color="green",
-    linewidth=2,
-)
+# --- SÉRIE PESSOA FÍSICA (PF) ---
+plt.plot(df_pf["data"], df_pf["valor_deflacionado"], label="PF (Real / Deflacionado)", color=cor_pf, linewidth=2.5)
+plt.plot(df_pf["data"], df_pf["valor"], label="PF (Nominal)", color=cor_pf, linestyle=":", linewidth=2, alpha=0.7)
 
-# Plotar a linha de Pessoa Jurídica
-plt.plot(
-    df_pj["data"],
-    df_pj["valor"],
-    label="Crédito Pessoa Jurídica (PJ)",
-    color="orange",
-    linewidth=2,
-)
+# --- SÉRIE PESSOA JURÍDICA (PJ) ---
+plt.plot(df_pj["data"], df_pj["valor_deflacionado"], label="PJ (Real / Deflacionado)", color=cor_pj, linewidth=2.5)
+plt.plot(df_pj["data"], df_pj["valor"], label="PJ (Nominal)", color=cor_pj, linestyle=":", linewidth=2, alpha=0.7)
 
-# Configurações estéticas do gráfico (Títulos e Legendas)
-plt.title("Evolução do Saldo de Operações de Crédito no Brasil (Pós-2020)", fontsize=14, fontweight="bold")
+# Configurações Estéticas do Gráfico
+ultimo_mes = df_tt["data"].iloc[-1].strftime("%m/%Y")
+plt.title(f"Análise de Crédito no Brasil: Valores Nominais vs Reais (Base: {ultimo_mes})", fontsize=14, fontweight="bold")
 plt.xlabel("Ano", fontsize=12)
 plt.ylabel("Saldo em Milhões de Reais (R$)", fontsize=12)
 
-# Adiciona linhas de grade ao fundo para facilitar a leitura
-plt.grid(True, linestyle="--", alpha=0.6)
-
-# Mostra a legenda que criamos nos 'label' lá em cima
-plt.legend(fontsize=11)
-
-# Ajusta o layout para não cortar nada
+plt.grid(True, linestyle="--", alpha=0.5)
+plt.legend(fontsize=10, loc="upper left", bbox_to_anchor=(1, 1)) # Move a legenda para fora se ficar muito grande
 plt.tight_layout()
 
-# Exibir o gráfico na tela!
-print("Gerando o gráfico... Uma nova janela deve se abrir.")
+print("Gerando o gráfico completo comparativo...")
 plt.show()
