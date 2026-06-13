@@ -4,11 +4,13 @@ import pandas as pd
 
 # 1. Definir o caminho dos arquivos que baixamos
 pasta_dados = "dados_brutos"
-arquivo_pf = os.path.join(pasta_dados, "credito_pessoa_fisica.csv")
-arquivo_pj = os.path.join(pasta_dados, "credito_pessoa_juridica.csv")
+arquivo_tt = os.path.join(pasta_dados, "Concessão_20631_CON_TOTAL.csv")
+arquivo_pf = os.path.join(pasta_dados, "Concessão_20633_CON_PF_TOTAL.csv")
+arquivo_pj = os.path.join(pasta_dados, "Concessão_20632_CON_PJ_TOTAL.csv")
 
 # 2. Ler os arquivos CSV usando o Pandas
 # Lembra que salvamos usando o separador ponto e vírgula (sep=";")? Precisamos avisar o Pandas aqui.
+df_tt = pd.read_csv(arquivo_tt, sep=";")
 df_pf = pd.read_csv(arquivo_pf, sep=";")
 df_pj = pd.read_csv(arquivo_pj, sep=";")
 
@@ -35,6 +37,7 @@ def tratar_dados(df):
 
 
 # Aplicar o tratamento nas duas tabelas
+df_tt = tratar_dados(df_tt)
 df_pf = tratar_dados(df_pf)
 df_pj = tratar_dados(df_pj)
 
@@ -43,12 +46,21 @@ df_pj = tratar_dados(df_pj)
 # Definimos o tamanho da imagem (largura, altura)
 plt.figure(figsize=(12, 6))
 
-# Plotar a linha de Pessoa Física (Eixo X = data, Eixo Y = valor)
+# Plotar a linha de Total (Eixo X = data, Eixo Y = valor)
+plt.plot(
+    df_tt["data"],
+    df_tt["valor"],
+    label="Crédito Total",
+    color="blue",
+    linewidth=2,
+)
+
+# Plotar a linha de Pessoa Física
 plt.plot(
     df_pf["data"],
     df_pf["valor"],
     label="Crédito Pessoa Física (PF)",
-    color="blue",
+    color="green",
     linewidth=2,
 )
 
