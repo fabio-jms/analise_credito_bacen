@@ -1,0 +1,589 @@
+﻿Classe;CODIGO;NOME;NOME_ABREV;Pes;Tipo
+ICC;27673;ICC - Pessoas físicas - Crédito não consignado;ICC_PF_CRDPESNAOCONSIGNADO;PF;Livre
+ICC;27674;ICC - Pessoas físicas - Crédito pessoal não consignado vinculado à composição de dívidas;ICC_PF_CRDPESNAOCONVINCOMPOSICAO;PF;Livre
+ICC;27676;ICC - Pessoas físicas - Crédito pessoal consignado para trabalhadores do setor público;ICC_PF_CRDPESCONTRASETPUBLICO;PF;Livre
+ICC;27675;ICC - Pessoas físicas - Crédito pessoal consignado para trabalhadores do setor privado;ICC_PF_CRDPESCONTRASETPRIVADO;PF;Livre
+ICC;27677;ICC - Pessoas físicas - Crédito pessoal consignado para aposentados e pensionistas do INSS;ICC_PF_CRDPESCONAPOINSS;PF;Livre
+ICC;27713;ICC - Pessoas físicas - Financiamento imobiliário com taxas de mercado;ICC_PF_FINIMOBMERCADO;PF;Direcionado
+ICC;27710;ICC - Pessoas físicas - Crédito rural com taxas de mercado;ICC_PF_CRDRURMERCADO;PF;Direcionado
+ICC;27680;ICC - Pessoas físicas - Aquisição de veículos;ICC_PF_AQUVEICULOS;PF;Livre
+ICC;27681;ICC - Pessoas físicas - Aquisição de outros bens;ICC_PF_AQUOUTBENS;PF;Livre
+ICC;27682;ICC - Pessoas físicas - Arrendamento mercantil de veículos;ICC_PF_ARRMERVEICULOS;PF;Livre
+ICC;27683;ICC - Pessoas físicas - Arrendamento mercantil de outros bens;ICC_PF_ARRMEROUTBENS;PF;Livre
+ICC;27687;ICC - Pessoas físicas - Desconto de Cheques;ICC_PF_DESCHEQUES;PF;Livre
+ICC;27711;ICC - Pessoas físicas - Crédito rural com taxas reguladas;ICC_PF_CRDRURREGULADAS;PF;Direcionado
+ICC;27714;ICC - Pessoas físicas - Financiamento imobiliário com taxas reguladas;ICC_PF_FINIMOBREGULADAS;PF;Direcionado
+ICC;27716;ICC - Pessoas físicas - Financiamento de investimentos com recursos do BNDES;ICC_PF_FININVRECBNDES;PF;Direcionado
+ICC;27717;ICC - Pessoas físicas - Agroindustrial com recursos do BNDES;ICC_PF_FINAGRRECBNDES;PF;Direcionado
+ICC;27718;ICC - Pessoas físicas - Microcrédito;ICC_PF_MICMICROEMPREENDEDOR;PF;Direcionado
+ICC;27671;ICC - Pessoas físicas - Crédito parcelado - Livre - Total;ICC_PF_PARCELADO_RL_TOTAL;PF;Livre
+ICC;27649;ICC - Pessoas jurídicas - Desconto de Duplicatas e recebíveis;ICC_PJ_DESDUPLICATAS;PJ;Livre
+ICC;27650;ICC - Pessoas jurídicas - Desconto de Cheques;ICC_PJ_DESCHEQUES;PJ;Livre
+ICC;27651;ICC - Pessoas jurídicas - Antecipação de faturas de cartão;ICC_PJ_ANTFATCARCREDITO;PJ;Livre
+ICC;27652;ICC - Pessoas jurídicas - Capital de giro com prazo de até 365 dias;ICC_PJ_CAPGIRPRZATE365;PJ;Livre
+ICC;27653;ICC - Pessoas jurídicas - Capital de giro com prazo superior a 365 dias;ICC_PJ_CAPGIRPRZSUP365;PJ;Livre
+ICC;27691;ICC - Pessoas jurídicas - Financiamento imobiliário com taxas de mercado;ICC_PJ_FINIMOBMERCADO;PJ;Direcionado
+ICC;27688;ICC - Pessoas jurídicas - Crédito rural com taxas de mercado;ICC_PJ_CRDRURMERCADO;PJ;Direcionado
+ICC;27658;ICC - Pessoas jurídicas - Aquisição de veículos;ICC_PJ_AQUVEICULOS;PJ;Livre
+ICC;27659;ICC - Pessoas jurídicas - Aquisição de outros bens;ICC_PJ_AQUOUTBENS;PJ;Livre
+ICC;27660;ICC - Pessoas jurídicas - Arrendamento mercantil de veículos;ICC_PJ_ARRMERVEICULOS;PJ;Livre
+ICC;27661;ICC - Pessoas jurídicas - Arrendamento mercantil de outros bens;ICC_PJ_ARRMEROUTBENS;PJ;Livre
+ICC;27662;ICC - Pessoas jurídicas - Vendor;ICC_PJ_VENDOR;PJ;Livre
+ICC;27663;ICC - Pessoas jurídicas - Compror;ICC_PJ_COMPROR;PJ;Livre
+ICC;27667;ICC - Pessoas jurídicas - Adiantamentos sobre contratos de câmbio (ACC);ICC_PJ_ACC;PJ;Livre
+ICC;27668;ICC - Pessoas jurídicas - Financiamento a importações;ICC_PJ_FINIMPORTACOES;PJ;Livre
+ICC;27669;ICC - Pessoas jurídicas - Financiamento a exportações;ICC_PJ_FINEXPORTACOES;PJ;Livre
+ICC;27670;ICC - Pessoas jurídicas - Repasse externo;ICC_PJ_REPEXTERNO;PJ;Livre
+ICC;27689;ICC - Pessoas jurídicas - Crédito rural com taxas reguladas;ICC_PJ_CRDRURREGULADAS;PJ;Direcionado
+ICC;27692;ICC - Pessoas jurídicas - Financiamento imobiliário com taxas reguladas;ICC_PJ_FINIMOBREGULADAS;PJ;Direcionado
+ICC;27694;ICC - Pessoas jurídicas - Capital de giro com recursos do BNDES;ICC_PJ_CAPGIR_BNDES;PJ;Direcionado
+ICC;27708;ICC - Pessoas jurídicas - Financiamento de investimentos com recursos do BNDES;ICC_PJ_FININVRECBNDES;PJ;Direcionado
+ICC;27709;ICC - Pessoas jurídicas - Agroindustrial com recursos do BNDES;ICC_PJ_FINAGRRECBNDES;PJ;Direcionado
+ICC;27648;ICC - Pessoas jurídicas - Crédito Parcelado - Livre - Total;ICC_PJ_PARCELADO_RL_TOTAL;PJ;Livre
+ICC;27644;ICC - Recursos Livres - Crédito não rotativo - Total;ICC_RL_PARCELADO_TOTAL;TT;Livre
+ICC;27654;ICC - Pessoas jurídicas - Capital de giro rotativo;ICC_PJ_CAPGIRROTATIVO;PJ;Livre
+ICC;27647;ICC - Pessoas físicas - Crédito parcelado - Total;ICC_PF_PARCELADO_TOTAL;PF;Total
+ICC;27678;ICC - Pessoas físicas - Crédito pessoal consignado total;ICC_PF_CRDPESCON_TOTAL;PF;Total
+ICC;27679;ICC - Pessoas físicas - Crédito pessoal total;ICC_PF_CRDPES_TOTAL;PF;Total
+ICC;27712;ICC - Pessoas físicas - Crédito rural total;ICC_PF_CRDRUR_TOTAL;PF;Total
+ICC;27715;ICC - Pessoas físicas - Financiamento imobiliário total;ICC_PF_FINIMOB_TOTAL;PF;Total
+ICC;25359;ICC - Pessoas físicas - Recursos direcionados - Total;ICC_PF_RD_TOTAL;PF;Direcionado
+ICC;27655;ICC - Pessoas jurídicas - Capital de giro total;ICC_PJ_CAPGIR_TOTAL;PJ;Total
+ICC;27646;ICC - Pessoas jurídicas - Crédito Parcelado - Total;ICC_PJ_PARCELADO_TOTAL;PJ;Total
+ICC;27690;ICC - Pessoas jurídicas - Crédito rural total;ICC_PJ_CRDRUR_TOTAL;PJ;Total
+ICC;27693;ICC - Pessoas jurídicas - Financiamento imobiliário total;ICC_PJ_FINIMOB_TOTAL;PJ;Total
+ICC;27645;ICC - Crédito parcelado - Total;ICC_PARCELADO_TOTAL;TT;Total
+ICC;25358;ICC - Pessoas jurídicas - Recursos direcionados - Total;ICC_PJ_RD_TOTAL;PJ;Direcionado
+ICC;25357;ICC - Recursos direcionados - Total;ICC_RD_TOTAL;TT;Direcionado
+ICC;27672;ICC - Pessoas físicas - Cheque especial;ICC_PF_CHQESPECIAL;PF;Livre
+ICC;27684;ICC - Pessoas físicas - Cartão de crédito rotativo;ICC_PF_CARCRDROTATIVO;PF;Livre
+ICC;27685;ICC - Pessoas físicas - Cartão de crédito parcelado;ICC_PF_CARCRDPARCELADO;PF;Livre
+ICC;27656;ICC - Pessoas jurídicas - Conta garantida;ICC_PJ_CONGARANTIDA;PJ;Livre
+ICC;27657;ICC - Pessoas jurídicas - Cheque especial;ICC_PJ_CHQESPECIAL;PJ;Livre
+ICC;27664;ICC - Pessoas jurídicas - Cartão de crédito rotativo;ICC_PJ_CARCRDROTATIVO;PJ;Livre
+ICC;27665;ICC - Pessoas jurídicas - Cartão de crédito parcelado;ICC_PJ_CARCRDPARCELADO;PJ;Livre
+ICC;27686;ICC - Pessoas físicas - Cartão de crédito total;ICC_PF_CARCRD_TOTAL;PF;Total
+ICC;27666;ICC - Pessoas jurídicas - Cartão de crédito total;ICC_PJ_CARCRD_TOTAL;PJ;Total
+ICC;25356;ICC - Pessoas físicas - Recursos livres - Total;ICC_PF_RL_TOTAL;PF;Livre
+ICC;25353;ICC - Pessoas físicas - Total;ICC_PF_TOTAL;PF;Total
+ICC;25355;ICC - Pessoas jurídicas - Recursos livres - Total;ICC_PJ_RL_TOTAL;PJ;Livre
+ICC;25352;ICC - Pessoas jurídicas - Total;ICC_PJ_TOTAL;PJ;Total
+ICC;25354;ICC - Recursos livres - Total;ICC_RL_TOTAL;TT;Livre
+ICC;25351;ICC - Total;ICC_TOTAL;TT;Total
+Atraso;21003;Atraso entre 15 e 90 dias - Total;ATR_TOTAL;TT;Total
+Atraso;21004;Atraso entre 15 e 90 dias - Pessoas jurídicas - Total;ATR_PJ_TOTAL;PJ;Total
+Atraso;21005;Atraso entre 15 e 90 dias - Pessoas físicas - Total;ATR_PF_TOTAL;PF;Total
+Atraso;21006;Atraso entre 15 e 90 dias - Recurso Livre - Total;ATR_RL_TOTAL;TT;Livre
+Atraso;21007;Atraso entre 15 e 90 dias - Pessoas jurídicas - Recurso Livre - Total;ATR_PJ_RL_TOTAL;PJ;Livre
+Atraso;21008;Atraso entre 15 e 90 dias - Pessoas jurídicas - Desconto de duplicatas e recebíveis;ATR_PJ_DESDUPLICATAS;PJ;Livre
+Atraso;21009;Atraso entre 15 e 90 dias - Pessoas jurídicas - Desconto de cheques;ATR_PJ_DESCHEQUES;PJ;Livre
+Atraso;21010;Atraso entre 15 e 90 dias - Pessoas jurídicas - Antecipação de faturas de cartão de crédito;ATR_PJ_ANTFATCARCREDITO;PJ;Livre
+Atraso;21011;Atraso entre 15 e 90 dias - Pessoas jurídicas - Capital de giro com prazo de até 365 dias;ATR_PJ_CAPGIRPRZATE365;PJ;Livre
+Atraso;21012;Atraso entre 15 e 90 dias - Pessoas jurídicas - Capital de giro com prazo superior a 365 dias;ATR_PJ_CAPGIRPRZSUP365;PJ;Livre
+Atraso;21013;Atraso entre 15 e 90 dias - Pessoas jurídicas - Capital de giro rotativo;ATR_PJ_CAPGIRROTATIVO;PJ;Livre
+Atraso;21014;Atraso entre 15 e 90 dias - Pessoas jurídicas - Capital de giro total;ATR_PJ_CAPGIR_TOTAL;PJ;Livre
+Atraso;21015;Atraso entre 15 e 90 dias - Pessoas jurídicas - Conta garantida;ATR_PJ_CONGARANTIDA;PJ;Livre
+Atraso;21016;Atraso entre 15 e 90 dias - Pessoas jurídicas - Cheque especial;ATR_PJ_CHQESPECIAL;PJ;Livre
+Atraso;21017;Atraso entre 15 e 90 dias - Pessoas jurídicas - Aquisição de veículos;ATR_PJ_AQUVEICULOS;PJ;Livre
+Atraso;21018;Atraso entre 15 e 90 dias - Pessoas jurídicas - Aquisição de outros bens;ATR_PJ_AQUOUTBENS;PJ;Livre
+Atraso;21019;Atraso entre 15 e 90 dias - Pessoas jurídicas - Aquisição de bens total;ATR_PJ_AQUBENSTT;PJ;Livre
+Atraso;21020;Atraso entre 15 e 90 dias - Pessoas jurídicas - Arrendamento mercantil de veículos;ATR_PJ_ARRMERVEICULOS;PJ;Livre
+Atraso;21021;Atraso entre 15 e 90 dias - Pessoas jurídicas - Arrendamento mercantil de outros bens;ATR_PJ_ARRMEROUTBENS;PJ;Livre
+Atraso;21022;Atraso entre 15 e 90 dias - Pessoas jurídicas - Arrendamento mercantil total;ATR_PJ_ARRMERCTT;PJ;Livre
+Atraso;21023;Atraso entre 15 e 90 dias - Pessoas jurídicas - Vendor;ATR_PJ_VENDOR;PJ;Livre
+Atraso;21024;Atraso entre 15 e 90 dias - Pessoas jurídicas - Compror;ATR_PJ_COMPROR;PJ;Livre
+Atraso;21025;Atraso entre 15 e 90 dias - Pessoas jurídicas - Cartão de crédito rotativo;ATR_PJ_CARCRDROTATIVO;PJ;Livre
+Atraso;21026;Atraso entre 15 e 90 dias - Pessoas jurídicas - Cartão de crédito parcelado;ATR_PJ_CARCRDPARCELADO;PJ;Livre
+Atraso;21027;Atraso entre 15 e 90 dias - Pessoas jurídicas - Cartão de crédito total;ATR_PJ_CARCRD_TOTAL;PJ;Livre
+Atraso;21028;Atraso entre 15 e 90 dias - Pessoas jurídicas - Adiantamento sobre contratos de câmbio (ACC);ATR_PJ_ACC;PJ;Livre
+Atraso;21029;Atraso entre 15 e 90 dias - Pessoas jurídicas - Financiamento a importações;ATR_PJ_FINIMPORTACOES;PJ;Livre
+Atraso;21030;Atraso entre 15 e 90 dias - Pessoas jurídicas - Financiamento a exportações;ATR_PJ_FINEXPORTACOES;PJ;Livre
+Atraso;21031;Atraso entre 15 e 90 dias - Pessoas jurídicas - Repasse externo;ATR_PJ_REPEXTERNO;PJ;Livre
+Atraso;21032;Atraso entre 15 e 90 dias - Pessoas jurídicas - Outros créditos livres;ATR_PJ_OUTROSLIVRES;PJ;Livre
+Atraso;21033;Atraso entre 15 e 90 dias - Pessoas físicas - Recurso Livre - Total;ATR_PF_RL_TOTAL;PF;Livre
+Atraso;21034;Atraso entre 15 e 90 dias - Pessoas físicas - Cheque especial;ATR_PF_CHQESPECIAL;PF;Livre
+Atraso;21035;Atraso entre 15 e 90 dias - Pessoas físicas - Crédito pessoal não consignado;ATR_PF_CRDPESNAOCONSIGNADO;PF;Livre
+Atraso;21036;Atraso entre 15 e 90 dias - Pessoas físicas - Crédito pessoal não consignado vinculado à composição de dívidas;ATR_PF_CRDPESNAOCONVINCOMPOSICAO;PF;Livre
+Atraso;21037;Atraso entre 15 e 90 dias - Pessoas físicas - Crédito pessoal consignado para trabalhadores do setor privado;ATR_PF_CRDPESCONTRASETPRIVADO;PF;Livre
+Atraso;21038;Atraso entre 15 e 90 dias - Pessoas físicas - Crédito pessoal consignado para trabalhadores do setor público;ATR_PF_CRDPESCONTRASETPUBLICO;PF;Livre
+Atraso;21039;Atraso entre 15 e 90 dias - Pessoas físicas - Crédito pessoal consignado para aposentados e pensionistas do INSS;ATR_PF_CRDPESCONAPOINSS;PF;Livre
+Atraso;21040;Atraso entre 15 e 90 dias - Pessoas físicas - Crédito pessoal consignado total;ATR_PF_CRDPESCON_TOTAL;PF;Livre
+Atraso;21041;Atraso entre 15 e 90 dias - Pessoas físicas - Crédito pessoal total;ATR_PF_CRDPES_TOTAL;PF;Livre
+Atraso;21042;Atraso entre 15 e 90 dias - Pessoas físicas - Aquisição de veículos;ATR_PF_AQUVEICULOS;PF;Livre
+Atraso;21043;Atraso entre 15 e 90 dias - Pessoas físicas - Aquisição de outros bens;ATR_PF_AQUOUTBENS;PF;Livre
+Atraso;21044;Atraso entre 15 e 90 dias - Pessoas físicas - Aquisição de bens total;ATR_PF_AQUBENSTT;PF;Livre
+Atraso;21045;Atraso entre 15 e 90 dias - Pessoas físicas - Arrendamento mercantil de veículos;ATR_PF_ARRMERVEICULOS;PF;Livre
+Atraso;21046;Atraso entre 15 e 90 dias - Pessoas físicas - Arrendamento mercantil de outros bens;ATR_PF_ARRMEROUTBENS;PF;Livre
+Atraso;21047;Atraso entre 15 e 90 dias - Pessoas físicas - Arrendamento mercantil total;ATR_PF_ARRMERCTT;PF;Livre
+Atraso;21048;Atraso entre 15 e 90 dias - Pessoas físicas - Cartão de crédito rotativo;ATR_PF_CARCRDROTATIVO;PF;Livre
+Atraso;21049;Atraso entre 15 e 90 dias - Pessoas físicas - Cartão de crédito parcelado;ATR_PF_CARCRDPARCELADO;PF;Livre
+Atraso;21050;Atraso entre 15 e 90 dias - Pessoas físicas - Cartão de crédito total;ATR_PF_CARCRD_TOTAL;PF;Livre
+Atraso;21051;Atraso entre 15 e 90 dias - Pessoas físicas - Desconto de cheques;ATR_PF_DESCHEQUES;PF;Livre
+Atraso;21052;Atraso entre 15 e 90 dias - Pessoas físicas - Outros créditos livres;ATR_PF_OUTROSLIVRES;PF;Livre
+Atraso;21053;Atraso entre 15 e 90 dias - Direcionado - Total;ATR_RL_TOTAL;TT;Direcionado
+Atraso;21054;Atraso entre 15 e 90 dias - Pessoas jurídicas - Recurso Direcionado - Total;ATR_PJ_RD_TOTAL;PJ;Direcionado
+Atraso;21055;Atraso entre 15 e 90 dias - Pessoas jurídicas - Crédito rural com taxas de mercado;ATR_PJ_CRDRURMERCADO;PJ;Direcionado
+Atraso;21056;Atraso entre 15 e 90 dias - Pessoas jurídicas - Crédito rural com taxas reguladas;ATR_PJ_CRDRURREGULADAS;PJ;Direcionado
+Atraso;21057;Atraso entre 15 e 90 dias - Pessoas jurídicas - Crédito rural total;ATR_PJ_CRDRUR_TOTAL;PJ;Direcionado
+Atraso;21058;Atraso entre 15 e 90 dias - Pessoas jurídicas - Financiamento imobiliário com taxas de mercado;ATR_PJ_FINIMOBMERCADO;PJ;Direcionado
+Atraso;21059;Atraso entre 15 e 90 dias - Pessoas jurídicas - Financiamento imobiliário com taxas reguladas;ATR_PJ_FINIMOBREGULADAS;PJ;Direcionado
+Atraso;21060;Atraso entre 15 e 90 dias - Pessoas jurídicas - Financiamento imobiliário total;ATR_PJ_FINIMOB_TOTAL;PJ;Direcionado
+Atraso;21061;Atraso entre 15 e 90 dias - Pessoas jurídicas - Capital de giro com recursos do BNDES;ATR_PJ_CAPGIR_BNDES;PJ;Direcionado
+Atraso;21062;Atraso entre 15 e 90 dias - Pessoas jurídicas - Financiamento de investimentos com recursos do BNDES;ATR_PJ_FININVRECBNDES;PJ;Direcionado
+Atraso;21063;Atraso entre 15 e 90 dias - Pessoas jurídicas - Financiamento agroindustrial com recursos do BNDES;ATR_PJ_FINAGRRECBNDES;PJ;Direcionado
+Atraso;21064;Atraso entre 15 e 90 dias - Pessoas jurídicas - Financiamento com recursos do BNDES total;ATR_PJ_FINBNDESTT;PJ;Direcionado
+Atraso;21065;Atraso entre 15 e 90 dias - Pessoas jurídicas - Outros créditos direcionados;ATR_PJ_OUTROSDIRECIONADOS;PJ;Direcionado
+Atraso;21066;Atraso entre 15 e 90 dias - Pessoas físicas - Recurso Direcionado - Total;ATR_PF_RD_TOTAL;PF;Direcionado
+Atraso;21067;Atraso entre 15 e 90 dias - Pessoas físicas - Crédito rural com taxas de mercado;ATR_PF_CRDRURMERCADO;PF;Direcionado
+Atraso;21068;Atraso entre 15 e 90 dias - Pessoas físicas - Crédito rural com taxas reguladas;ATR_PF_CRDRURREGULADAS;PF;Direcionado
+Atraso;21069;Atraso entre 15 e 90 dias - Pessoas físicas - Crédito rural total;ATR_PF_CRDRUR_TOTAL;PF;Total
+Atraso;21070;Atraso entre 15 e 90 dias - Pessoas físicas - Financiamento imobiliário com taxas de mercado;ATR_PF_FINIMOBMERCADO;PF;Direcionado
+Atraso;21071;Atraso entre 15 e 90 dias - Pessoas físicas - Financiamento imobiliário com taxas reguladas;ATR_PF_FINIMOBREGULADAS;PF;Direcionado
+Atraso;21072;Atraso entre 15 e 90 dias - Pessoas físicas - Financiamento imobiliário total;ATR_PF_FINIMOB_TOTAL;PF;Direcionado
+Atraso;21073;Atraso entre 15 e 90 dias - Pessoas físicas - Capital de giro com recursos do BNDES;ATR_PF_CAPGIR_BNDES;PF;Direcionado
+Atraso;21074;Atraso entre 15 e 90 dias - Pessoas físicas - Financiamento de investimentos com recursos do BNDES;ATR_PF_FININVRECBNDES;PF;Direcionado
+Atraso;21075;Atraso entre 15 e 90 dias - Pessoas físicas - Financiamento agroindustrial com recursos do BNDES;ATR_PF_FINAGRRECBNDES;PF;Direcionado
+Atraso;21076;Atraso entre 15 e 90 dias - Pessoas físicas - Financiamento com recursos do BNDES total;ATR_PF_FINBNDESTT;PF;Direcionado
+Atraso;21077;Atraso entre 15 e 90 dias - Pessoas físicas - Microcrédito destinado a consumo;ATR_PF_MICCONSUMO;PF;Direcionado
+Atraso;21078;Atraso entre 15 e 90 dias - Pessoas físicas - Microcrédito destinado a microempreendedores;ATR_PF_MICMICROEMPREENDEDOR;PF;Direcionado
+Atraso;21080;Atraso entre 15 e 90 dias - Pessoas físicas - Microcrédito total;ATR_PF_MICTT;PF;Direcionado
+Atraso;21081;Atraso entre 15 e 90 dias - Pessoas físicas - Outros créditos direcionados;ATR_PF_OUTROSDIRECIONADOS;PF;Direcionado
+Saldo;20598;Saldo - Pessoas jurídicas - Financiamento imobiliário com taxas de mercado;SALDO_PJ_FINIMOBMERCADO;PJ;Direcionado
+Saldo;20595;Saldo - Pessoas jurídicas - Crédito rural com taxas de mercado;SALDO_PJ_CRDRURMERCADO;PJ;Direcionado
+Saldo;20596;Saldo - Pessoas jurídicas - Crédito rural com taxas reguladas;SALDO_PJ_CRDRURREGULADAS;PJ;Direcionado
+Saldo;20599;Saldo - Pessoas jurídicas - Financiamento imobiliário com taxas reguladas;SALDO_PJ_FINIMOBREGULADAS;PJ;Direcionado
+Saldo;20601;Saldo - Pessoas jurídicas - Capital de giro com recursos do BNDES;SALDO_PJ_CAPGIR_BNDES;PJ;Direcionado
+Saldo;20602;Saldo - Pessoas jurídicas - Financiamento de investimentos com recursos do BNDES;SALDO_PJ_FININVRECBNDES;PJ;Direcionado
+Saldo;20603;Saldo - Pessoas jurídicas - Financiamento agroindustrial com recursos do BNDES;SALDO_PJ_FINAGRRECBNDES;PJ;Direcionado
+Saldo;20605;Saldo - Pessoas jurídicas - Outros créditos direcionados;SALDO_PJ_OUTROSDIRECIONADOS;PJ;Direcionado
+Saldo;20610;Saldo - Pessoas físicas - Financiamento imobiliário com taxas de mercado;SALDO_PF_FINIMOBMERCADO;PF;Direcionado
+Saldo;20607;Saldo - Pessoas físicas - Crédito rural com taxas de mercado;SALDO_PF_CRDRURMERCADO;PF;Direcionado
+Saldo;20608;Saldo - Pessoas físicas - Crédito rural com taxas reguladas;SALDO_PF_CRDRURREGULADAS;PF;Direcionado
+Saldo;20611;Saldo - Pessoas físicas - Financiamento imobiliário com taxas reguladas;SALDO_PF_FINIMOBREGULADAS;PF;Direcionado
+Saldo;20613;Saldo - Pessoas físicas - Capital de giro com recursos do BNDES;SALDO_PF_CAPGIR_BNDES;PF;Direcionado
+Saldo;20614;Saldo - Pessoas físicas - Financiamento de investimentos com recursos do BNDES;SALDO_PF_FININVRECBNDES;PF;Direcionado
+Saldo;20615;Saldo - Pessoas físicas - Financiamento agroindustrial com recursos do BNDES;SALDO_PF_FINAGRRECBNDES;PF;Direcionado
+Saldo;20617;Saldo - Pessoas físicas - Microcrédito destinado a consumo;SALDO_PF_MICCONSUMO;PF;Direcionado
+Saldo;20618;Saldo - Pessoas físicas - Microcrédito destinado a microempreendedores;SALDO_PF_MICMICROEMPREENDEDOR;PF;Direcionado
+Saldo;20621;Saldo - Pessoas físicas - Outros créditos direcionados;SALDO_PF_OUTROSDIRECIONADOS;PF;Direcionado
+Saldo;20606;Saldo - Pessoas físicas - Recurso Direcionado - Total;SALDO_PF_RD_TOTAL;PF;Direcionado
+Saldo;20594;Saldo - Pessoas jurídicas - Recurso Direcionado - Total;SALDO_PJ_RD_TOTAL;PJ;Direcionado
+Saldo;20593;Saldo - Total Direcionado;SALDO_RD_TOTAL;TT;Direcionado
+Saldo;20544;Saldo - Pessoas jurídicas - Desconto de duplicatas e recebíveis;SALDO_PJ_DESDUPLICATAS;PJ;Livre
+Saldo;20545;Saldo - Pessoas jurídicas - Desconto de cheques;SALDO_PJ_DESCHEQUES;PJ;Livre
+Saldo;20546;Saldo - Pessoas jurídicas - Antecipação de faturas de cartão de crédito;SALDO_PJ_ANTFATCARCREDITO;PJ;Livre
+Saldo;20547;Saldo - Pessoas jurídicas - Capital de giro com prazo de até 365 dias;SALDO_PJ_CAPGIRPRZATE365;PJ;Livre
+Saldo;20548;Saldo - Pessoas jurídicas - Capital de giro com prazo superior a 365 dias;SALDO_PJ_CAPGIRPRZSUP365;PJ;Livre
+Saldo;20549;Saldo - Pessoas jurídicas - Capital de giro rotativo;SALDO_PJ_CAPGIRROTATIVO;PJ;Livre
+Saldo;20551;Saldo - Pessoas jurídicas - Conta garantida;SALDO_PJ_CONGARANTIDA;PJ;Livre
+Saldo;20552;Saldo - Pessoas jurídicas - Cheque especial;SALDO_PJ_CHQESPECIAL;PJ;Livre
+Saldo;20553;Saldo - Pessoas jurídicas - Aquisição de veículos;SALDO_PJ_AQUVEICULOS;PJ;Livre
+Saldo;20554;Saldo - Pessoas jurídicas - Aquisição de outros bens;SALDO_PJ_AQUOUTBENS;PJ;Livre
+Saldo;20556;Saldo - Pessoas jurídicas - Arrendamento mercantil de veículos;SALDO_PJ_ARRMERVEICULOS;PJ;Livre
+Saldo;20557;Saldo - Pessoas jurídicas - Arrendamento mercantil de outros bens;SALDO_PJ_ARRMEROUTBENS;PJ;Livre
+Saldo;20559;Saldo - Pessoas jurídicas - Vendor;SALDO_PJ_VENDOR;PJ;Livre
+Saldo;20560;Saldo - Pessoas jurídicas - Compror;SALDO_PJ_COMPROR;PJ;Livre
+Saldo;20561;Saldo - Pessoas jurídicas - Cartão de crédito rotativo;SALDO_PJ_CARCRDROTATIVO;PJ;Livre
+Saldo;20562;Saldo - Pessoas jurídicas - Cartão de crédito parcelado;SALDO_PJ_CARCRDPARCELADO;PJ;Livre
+Saldo;20563;Saldo - Pessoas jurídicas - Cartão de crédito à vista;SALDO_PJ_CARCRDAVISTA;PJ;Livre
+Saldo;20565;Saldo - Pessoas jurídicas - Adiantamento sobre contratos de câmbio (ACC);SALDO_PJ_ACC;PJ;Livre
+Saldo;20566;Saldo - Pessoas jurídicas - Financiamento a importações;SALDO_PJ_FINIMPORTACOES;PJ;Livre
+Saldo;20567;Saldo - Pessoas jurídicas - Financiamento a exportações;SALDO_PJ_FINEXPORTACOES;PJ;Livre
+Saldo;20568;Saldo - Pessoas jurídicas - Repasse externo;SALDO_PJ_REPEXTERNO;PJ;Livre
+Saldo;20569;Saldo - Pessoas jurídicas - Outros créditos livres;SALDO_PJ_OUTROSLIVRES;PJ;Livre
+Saldo;20573;Saldo - Pessoas físicas - Cheque especial;SALDO_PF_CHQESPECIAL;PF;Livre
+Saldo;20574;Saldo - Pessoas físicas - Crédito pessoal não consignado;SALDO_PF_CRDPESNAOCONSIGNADO;PF;Livre
+Saldo;20575;Saldo - Pessoas físicas - Crédito pessoal não consignado vinculado à composição de dívidas;SALDO_PF_CRDPESNAOCONVINCOMP;PF;Livre
+Saldo;20577;Saldo - Pessoas físicas - Crédito pessoal consignado para trabalhadores do setor público;SALDO_PF_CRDPESCONTRASETPUBLICO;PF;Livre
+Saldo;20576;Saldo - Pessoas físicas - Crédito pessoal consignado para trabalhadores do setor privado;SALDO_PF_CRDPESCONTRASETPRIVADO;PF;Livre
+Saldo;20578;Saldo - Pessoas físicas - Crédito pessoal consignado para aposentados e pensionistas do INSS;SALDO_PF_CRDPESCONAPOINSS;PF;Livre
+Saldo;20581;Saldo - Pessoas físicas - Aquisição de veículos;SALDO_PF_AQUVEICULOS;PF;Livre
+Saldo;20582;Saldo - Pessoas físicas - Aquisição de outros bens;SALDO_PF_AQUOUTBENS;PF;Livre
+Saldo;20587;Saldo - Pessoas físicas - Cartão de crédito rotativo;SALDO_PF_CARCRDROTATIVO;PF;Livre
+Saldo;20588;Saldo - Pessoas físicas - Cartão de crédito parcelado;SALDO_PF_CARCRDPARCELADO;PF;Livre
+Saldo;20589;Saldo - Pessoas físicas - Cartão de crédito à vista;SALDO_PF_CARCRDAVISTA;PF;Livre
+Saldo;20584;Saldo - Pessoas físicas - Arrendamento mercantil de veículos;SALDO_PF_ARRMERVEICULOS;PF;Livre
+Saldo;20585;Saldo - Pessoas físicas - Arrendamento mercantil de outros bens;SALDO_PF_ARRMEROUTBENS;PF;Livre
+Saldo;20591;Saldo - Pessoas físicas - Desconto de cheques;SALDO_PF_DESCHEQUES;PF;Livre
+Saldo;20592;Saldo - Pessoas físicas - Outros créditos livres;SALDO_PF_OUTROSLIVRES;PF;Livre
+Saldo;20570;Saldo - Pessoas físicas - Recurso Livre - Total;SALDO_PF_RL_TOTAL;PF;Livre
+Saldo;20543;Saldo - Pessoas jurídicas - Recurso Livre - Total;SALDO_PJ_RL_TOTAL;PJ;Livre
+Saldo;20542;Saldo - Total Livre;SALDO_RL_TOTAL;TT;Livre
+Saldo;20583;Saldo - Pessoas físicas - Aquisição de bens total;SALDO_PF_AQUBENSTT;PF;Total
+Saldo;20586;Saldo - Pessoas físicas - Arrendamento mercantil total;SALDO_PF_ARRMERCTT;PF;Total
+Saldo;20590;Saldo - Pessoas físicas - Cartão de crédito total;SALDO_PF_CARCRD_TOTAL;PF;Total
+Saldo;20580;Saldo - Pessoas físicas - Crédito pessoal total;SALDO_PF_CRDPES_TOTAL;PF;Total
+Saldo;20579;Saldo - Pessoas físicas - Crédito pessoal consignado total;SALDO_PF_CRDPESCON_TOTAL;PF;Total
+Saldo;20609;Saldo - Pessoas físicas - Crédito rural total;SALDO_PF_CRDRUR_TOTAL;PF;Total
+Saldo;21362;Saldo - Pessoas físicas - Financiamento com recursos do BNDES - Repasses;SALDO_PF_FINBNDESREPASSES;PF;Total
+Saldo;20616;Saldo - Pessoas físicas - Financiamento com recursos do BNDES total;SALDO_PF_FINBNDESTT;PF;Total
+Saldo;20612;Saldo - Pessoas físicas - Financiamento imobiliário total;SALDO_PF_FINIMOB_TOTAL;PF;Total
+Saldo;20620;Saldo - Pessoas físicas - Microcrédito total;SALDO_PF_MICTT;PF;Total
+Saldo;20571;Saldo - Pessoas físicas - Não rotativo;SALDO_PF_PARCELADO_TOTAL;PF;Total
+Saldo;20541;Saldo - Pessoas físicas - Total;SALDO_PF_TOTAL;PF;Total
+Saldo;20572;Saldo - Pessoas físicas - Rotativo;SALDO_PF_ROTATIVO_TOTAL;PF;Total
+Saldo;28165;Saldo - Pessoas jurídicas - Não rotativo Total;SALDO_PJ_PARCELADO_TOTAL;PJ;Total
+Saldo;20555;Saldo - Pessoas jurídicas - Aquisição de bens total;SALDO_PJ_AQUBENSTT;PJ;Total
+Saldo;20558;Saldo - Pessoas jurídicas - Arrendamento mercantil total;SALDO_PJ_ARRMERCTT;PJ;Total
+Saldo;20550;Saldo - Pessoas jurídicas - Capital de giro total;SALDO_PJ_CAPGIR_TOTAL;PJ;Total
+Saldo;20564;Saldo - Pessoas jurídicas - Cartão de crédito total;SALDO_PJ_CARCRD_TOTAL;PJ;Total
+Saldo;20597;Saldo - Pessoas jurídicas - Crédito rural total;SALDO_PJ_CRDRUR_TOTAL;PJ;Total
+Saldo;21359;Saldo - Pessoas jurídicas - Financiamento com recursos do BNDES - Carteira própria;SALDO_PJ_FINBNDESCARTPROP;PJ;Total
+Saldo;21360;Saldo - Pessoas jurídicas - Financiamento com recursos do BNDES - Repasses;SALDO_PJ_FINBNDESREPASSES;PJ;Total
+Saldo;20604;Saldo - Pessoas jurídicas - Financiamento com recursos do BNDES total;SALDO_PJ_FINBNDESTT;PJ;Total
+Saldo;20600;Saldo - Pessoas jurídicas - Financiamento imobiliário total;SALDO_PJ_FINIMOB_TOTAL;PJ;Total
+Saldo;20540;Saldo - Pessoas jurídicas - Total;SALDO_PJ_TOTAL;PJ;Total
+Saldo;28166;Saldo - Pessoas jurídicas - Rotativo Total;SALDO_PJ_ROTATIVO_TOTAL;PJ;Total
+Saldo;20539;Saldo - Total;SALDO_TOTAL;TT;Total
+Saldo;27702;Saldo - porte da empresa - Grande;SALDO_PJ_GRANDE_EMP;PJ;Total
+Saldo;27701;Saldo - porte da empresa - PME;SALDO_PJ_PME_EMP;PJ;Total
+Concessão;20675;Concessões - Pessoas físicas - Aquisição de bens total;CON_PF_AQUBENSTT;PF;Total
+Concessão;20674;Concessões - Pessoas físicas - Aquisição de outros bens;CON_PF_AQUOUTBENS;PF;Livre
+Concessão;20673;Concessões - Pessoas físicas - Aquisição de veículos;CON_PF_AQUVEICULOS;PF;Livre
+Concessão;20677;Concessões - Pessoas físicas - Arrendamento mercantil de outros bens;CON_PF_ARRMEROUTBENS;PF;Livre
+Concessão;20676;Concessões - Pessoas físicas - Arrendamento mercantil de veículos;CON_PF_ARRMERVEICULOS;PF;Livre
+Concessão;20678;Concessões - Pessoas físicas - Arrendamento mercantil total;CON_PF_ARRMERCTT;PF;Total
+Concessão;20705;Concessões - Pessoas físicas - Capital de giro com recursos do BNDES;CON_PF_CAPGIR_BNDES;PF;Direcionado
+Concessão;20681;Concessões - Pessoas físicas - Cartão de crédito à vista;CON_PF_CARCRDAVISTA;PF;Livre
+Concessão;20680;Concessões - Pessoas físicas - Cartão de crédito parcelado;CON_PF_CARCRDPARCELADO;PF;Livre
+Concessão;20679;Concessões - Pessoas físicas - Cartão de crédito rotativo;CON_PF_CARCRDROTATIVO;PF;Livre
+Concessão;20682;Concessões - Pessoas físicas - Cartão de crédito total;CON_PF_CARCRD_TOTAL;PF;Total
+Concessão;20665;Concessões - Pessoas físicas - Cheque especial;CON_PF_CHQESPECIAL;PF;Livre
+Concessão;20670;Concessões - Pessoas físicas - Crédito pessoal consignado para aposentados e pensionistas do INSS;CON_PF_CRDPESCONAPOINSS;PF;Livre
+Concessão;20668;Concessões - Pessoas físicas - Crédito pessoal consignado para trabalhadores do setor privado;CON_PF_CRDPESCONTRASETPRIVADO;PF;Livre
+Concessão;20669;Concessões - Pessoas físicas - Crédito pessoal consignado para trabalhadores do setor público;CON_PF_CRDPESCONTRASETPUBLICO;PF;Livre
+Concessão;20671;Concessões - Pessoas físicas - Crédito pessoal consignado total;CON_PF_CRDPESCON_TOTAL;PF;Total
+Concessão;20666;Concessões - Pessoas físicas - Crédito pessoal não consignado;CON_PF_CRDPESNAOCONSIGNADO;PF;Livre
+Concessão;20667;Concessões - Pessoas físicas - Crédito pessoal não consignado vinculado à composição de dívidas;CON_PF_CRDPESNAOCONVINCOMPOSICAO;PF;Livre
+Concessão;20672;Concessões - Pessoas físicas - Crédito pessoal total;CON_PF_CRDPES_TOTAL;PF;Total
+Concessão;20699;Concessões - Pessoas físicas - Crédito rural com taxas de mercado;CON_PF_CRDRURMERCADO;PF;Direcionado
+Concessão;20700;Concessões - Pessoas físicas - Crédito rural com taxas reguladas;CON_PF_CRDRURREGULADAS;PF;Direcionado
+Concessão;20701;Concessões - Pessoas físicas - Crédito rural total;CON_PF_CRDRUR_TOTAL;PF;Total
+Concessão;20683;Concessões - Pessoas físicas - Desconto de cheques;CON_PF_DESCHEQUES;PF;Livre
+Concessão;20707;Concessões - Pessoas físicas - Financiamento agroindustrial com recursos do BNDES;CON_PF_FINAGRRECBNDES;PF;Direcionado
+Concessão;20708;Concessões - Pessoas físicas - Financiamento com recursos do BNDES total;CON_PF_FINBNDESTT;PF;Total
+Concessão;20706;Concessões - Pessoas físicas - Financiamento de investimentos com recursos do BNDES;CON_PF_FININVRECBNDES;PF;Direcionado
+Concessão;20702;Concessões - Pessoas físicas - Financiamento imobiliário com taxas de mercado;CON_PF_FINIMOBMERCADO;PF;Direcionado
+Concessão;20703;Concessões - Pessoas físicas - Financiamento imobiliário com taxas reguladas;CON_PF_FINIMOBREGULADAS;PF;Direcionado
+Concessão;20704;Concessões - Pessoas físicas - Financiamento imobiliário total;CON_PF_FINIMOB_TOTAL;PF;Total
+Concessão;20709;Concessões - Pessoas físicas - Microcrédito destinado a consumo;CON_PF_MICCONSUMO;PF;Direcionado
+Concessão;20710;Concessões - Pessoas físicas - Microcrédito destinado a microempreendedores;CON_PF_MICMICROEMPREENDEDOR;PF;Direcionado
+Concessão;20712;Concessões - Pessoas físicas - Microcrédito total;CON_PF_MICTT;PF;Total
+Concessão;20663;Concessões - Pessoas físicas - Não rotativo;CON_PF_PARCELADO_TOTAL;PF;Total
+Concessão;20713;Concessões - Pessoas físicas - Outros créditos direcionados;CON_PF_OUTROSDIRECIONADOS;PF;Direcionado
+Concessão;20684;Concessões - Pessoas físicas - Outros créditos livres;CON_PF_OUTROSLIVRES;PF;Livre
+Concessão;20698;Concessões - Pessoas físicas - Recurso Direcionado - Total;CON_PF_RD_TOTAL;PF;Direcionado
+Concessão;20662;Concessões - Pessoas físicas - Recurso Livre - Total;CON_PF_RL_TOTAL;PF;Livre
+Concessão;20664;Concessões - Pessoas físicas - Rotativo;CON_PF_ROTATIVO_TOTAL;PF;Total
+Concessão;20633;Concessões - Pessoas físicas - Total;CON_PF_TOTAL;PF;Total
+Concessão;20657;Concessões - Pessoas jurídicas - Adiantamento sobre contratos de câmbio (ACC);CON_PJ_ACC;PJ;Livre
+Concessão;20638;Concessões - Pessoas jurídicas - Antecipação de faturas de cartão de crédito;CON_PJ_ANTFATCARCREDITO;PJ;Livre
+Concessão;20647;Concessões - Pessoas jurídicas - Aquisição de bens total;CON_PJ_AQUBENSTT;PJ;Total
+Concessão;20646;Concessões - Pessoas jurídicas - Aquisição de outros bens;CON_PJ_AQUOUTBENS;PJ;Livre
+Concessão;20645;Concessões - Pessoas jurídicas - Aquisição de veículos;CON_PJ_AQUVEICULOS;PJ;Livre
+Concessão;20649;Concessões - Pessoas jurídicas - Arrendamento mercantil de outros bens;CON_PJ_ARRMEROUTBENS;PJ;Livre
+Concessão;20648;Concessões - Pessoas jurídicas - Arrendamento mercantil de veículos;CON_PJ_ARRMERVEICULOS;PJ;Livre
+Concessão;20650;Concessões - Pessoas jurídicas - Arrendamento mercantil total;CON_PJ_ARRMERCTT;PJ;Total
+Concessão;20639;Concessões - Pessoas jurídicas - Capital de giro com prazo de até 365 dias;CON_PJ_CAPGIRPRZATE365;PJ;Livre
+Concessão;20640;Concessões - Pessoas jurídicas - Capital de giro com prazo superior a 365 dias;CON_PJ_CAPGIRPRZSUP365;PJ;Livre
+Concessão;20693;Concessões - Pessoas jurídicas - Capital de giro com recursos do BNDES;CON_PJ_CAPGIR_BNDES;PJ;Direcionado
+Concessão;20641;Concessões - Pessoas jurídicas - Capital de giro rotativo;CON_PJ_CAPGIRROTATIVO;PJ;Livre
+Concessão;20642;Concessões - Pessoas jurídicas - Capital de giro total;CON_PJ_CAPGIR_TOTAL;PJ;Total
+Concessão;20655;Concessões - Pessoas jurídicas - Cartão de crédito à vista;CON_PJ_CARCRDAVISTA;PJ;Livre
+Concessão;20654;Concessões - Pessoas jurídicas - Cartão de crédito parcelado;CON_PJ_CARCRDPARCELADO;PJ;Livre
+Concessão;20653;Concessões - Pessoas jurídicas - Cartão de crédito rotativo;CON_PJ_CARCRDROTATIVO;PJ;Livre
+Concessão;20656;Concessões - Pessoas jurídicas - Cartão de crédito total;CON_PJ_CARCRD_TOTAL;PJ;Total
+Concessão;20644;Concessões - Pessoas jurídicas - Cheque especial;CON_PJ_CHQESPECIAL;PJ;Livre
+Concessão;20652;Concessões - Pessoas jurídicas - Compror;CON_PJ_COMPROR;PJ;Livre
+Concessão;20643;Concessões - Pessoas jurídicas - Conta garantida;CON_PJ_CONGARANTIDA;PJ;Livre
+Concessão;20687;Concessões - Pessoas jurídicas - Crédito rural com taxas de mercado;CON_PJ_CRDRURMERCADO;PJ;Direcionado
+Concessão;20688;Concessões - Pessoas jurídicas - Crédito rural com taxas reguladas;CON_PJ_CRDRURREGULADAS;PJ;Direcionado
+Concessão;20689;Concessões - Pessoas jurídicas - Crédito rural total;CON_PJ_CRDRUR_TOTAL;PJ;Total
+Concessão;20637;Concessões - Pessoas jurídicas - Desconto de cheques;CON_PJ_DESCHEQUES;PJ;Livre
+Concessão;20636;Concessões - Pessoas jurídicas - Desconto de duplicatas e recebíveis;CON_PJ_DESDUPLICATAS;PJ;Livre
+Concessão;20659;Concessões - Pessoas jurídicas - Financiamento a exportações;CON_PJ_FINEXPORTACOES;PJ;Livre
+Concessão;20658;Concessões - Pessoas jurídicas - Financiamento a importações;CON_PJ_FINIMPORTACOES;PJ;Livre
+Concessão;20695;Concessões - Pessoas jurídicas - Financiamento agroindustrial com recursos do BNDES;CON_PJ_FINAGRRECBNDES;PJ;Direcionado
+Concessão;20696;Concessões - Pessoas jurídicas - Financiamento com recursos do BNDES total;CON_PJ_FINBNDESTT;PJ;Total
+Concessão;20694;Concessões - Pessoas jurídicas - Financiamento de investimentos com recursos do BNDES;CON_PJ_FININVRECBNDES;PJ;Direcionado
+Concessão;20690;Concessões - Pessoas jurídicas - Financiamento imobiliário com taxas de mercado;CON_PJ_FINIMOBMERCADO;PJ;Direcionado
+Concessão;20691;Concessões - Pessoas jurídicas - Financiamento imobiliário com taxas reguladas;CON_PJ_FINIMOBREGULADAS;PJ;Direcionado
+Concessão;20692;Concessões - Pessoas jurídicas - Financiamento imobiliário total;CON_PJ_FINIMOB_TOTAL;PJ;Total
+Concessão;28163;Concessões - Pessoas jurídicas - Não rotativo;CON_PJ_PARCELADO_TOTAL;PJ;Total
+Concessão;20697;Concessões - Pessoas jurídicas - Outros créditos direcionados;CON_PJ_OUTROSDIRECIONADOS;PJ;Direcionado
+Concessão;20661;Concessões - Pessoas jurídicas - Outros créditos livres;CON_PJ_OUTROSLIVRES;PJ;Livre
+Concessão;20686;Concessões - Pessoas jurídicas - Recurso Direcionado - Total;CON_PJ_RD_TOTAL;PJ;Direcionado
+Concessão;20635;Concessões - Pessoas jurídicas - Recurso Livre - Total;CON_PJ_RL_TOTAL;PJ;Livre
+Concessão;20660;Concessões - Pessoas jurídicas - Repasse externo;CON_PJ_REPEXTERNO;PJ;Livre
+Concessão;28164;Concessões - Pessoas jurídicas - Rotativo;CON_PJ_ROTATIVO_TOTAL;PJ;Total
+Concessão;20632;Concessões - Pessoas jurídicas - Total;CON_PJ_TOTAL;PJ;Total
+Concessão;20651;Concessões - Pessoas jurídicas - Vendor;CON_PJ_VENDOR;PJ;Livre
+Concessão;20685;Concessões - Recurso Direcionado - Total;CON_RD_TOTAL;TT;Direcionado
+Concessão;20634;Concessões - Recurso Livre - Total;CON_RL_TOTAL;TT;Livre
+Concessão;20631;Concessões - Total;CON_TOTAL;TT;Total
+Inadimplencia;21082;Inadimplência da carteira - Total;INADI_TOTAL;TT;Total
+Inadimplencia;21083;Inadimplência da carteira - Pessoas jurídicas - Total;INADI_PJ_TOTAL;PJ;Total
+Inadimplencia;21084;Inadimplência da carteira - Pessoas físicas - Total;INADI_PF_TOTAL;PF;Total
+Inadimplencia;21085;Inadimplência da carteira - Recurso Livre - Total;INADI_RL_TOTAL;TT;Livre
+Inadimplencia;21086;Inadimplência da carteira - Pessoas jurídicas - Recurso Livre - Total;INADI_PJ_RL_TOTAL;PJ;Livre
+Inadimplencia;21087;Inadimplência da carteira - Pessoas jurídicas - Desconto de duplicatas e recebíveis;INADI_PJ_DESDUPLICATAS;PJ;Livre
+Inadimplencia;21088;Inadimplência da carteira - Pessoas jurídicas - Desconto de cheques;INADI_PJ_DESCHEQUES;PJ;Livre
+Inadimplencia;21089;Inadimplência da carteira - Pessoas jurídicas - Antecipação de faturas de cartão de crédito;INADI_PJ_ANTFATCARCREDITO;PJ;Livre
+Inadimplencia;21090;Inadimplência da carteira - Pessoas jurídicas - Capital de giro com prazo de até 365 dias;INADI_PJ_CAPGIRPRZATE365;PJ;Livre
+Inadimplencia;21091;Inadimplência da carteira - Pessoas jurídicas - Capital de giro com prazo superior a 365 dias;INADI_PJ_CAPGIRPRZSUP365;PJ;Livre
+Inadimplencia;21092;Inadimplência da carteira - Pessoas jurídicas - Capital de giro rotativo;INADI_PJ_CAPGIRROTATIVO;PJ;Livre
+Inadimplencia;21093;Inadimplência da carteira - Pessoas jurídicas - Capital de giro total;INADI_PJ_CAPGIR_TOTAL;PJ;Livre
+Inadimplencia;21094;Inadimplência da carteira - Pessoas jurídicas - Conta garantida;INADI_PJ_CONGARANTIDA;PJ;Livre
+Inadimplencia;21095;Inadimplência da carteira - Pessoas jurídicas - Cheque especial;INADI_PJ_CHQESPECIAL;PJ;Livre
+Inadimplencia;21096;Inadimplência da carteira - Pessoas jurídicas - Aquisição de veículos;INADI_PJ_AQUVEICULOS;PJ;Livre
+Inadimplencia;21097;Inadimplência da carteira - Pessoas jurídicas - Aquisição de outros bens;INADI_PJ_AQUOUTBENS;PJ;Livre
+Inadimplencia;21098;Inadimplência da carteira - Pessoas jurídicas - Aquisição de bens total;INADI_PJ_AQUBENSTT;PJ;Livre
+Inadimplencia;21099;Inadimplência da carteira - Pessoas jurídicas - Arrendamento mercantil de veículos;INADI_PJ_ARRMERVEICULOS;PJ;Livre
+Inadimplencia;21100;Inadimplência da carteira - Pessoas jurídicas - Arrendamento mercantil de outros bens;INADI_PJ_ARRMEROUTBENS;PJ;Livre
+Inadimplencia;21101;Inadimplência da carteira - Pessoas jurídicas - Arrendamento mercantil total;INADI_PJ_ARRMERCTT;PJ;Livre
+Inadimplencia;21102;Inadimplência da carteira - Pessoas jurídicas - Vendor;INADI_PJ_VENDOR;PJ;Livre
+Inadimplencia;21103;Inadimplência da carteira - Pessoas jurídicas - Compror;INADI_PJ_COMPROR;PJ;Livre
+Inadimplencia;21104;Inadimplência da carteira - Pessoas jurídicas - Cartão de crédito rotativo;INADI_PJ_CARCRDROTATIVO;PJ;Livre
+Inadimplencia;21105;Inadimplência da carteira - Pessoas jurídicas - Cartão de crédito parcelado;INADI_PJ_CARCRDPARCELADO;PJ;Livre
+Inadimplencia;21106;Inadimplência da carteira - Pessoas jurídicas - Cartão de crédito total;INADI_PJ_CARCRD_TOTAL;PJ;Livre
+Inadimplencia;21107;Inadimplência da carteira - Pessoas jurídicas - Adiantamento sobre contratos de câmbio (ACC);INADI_PJ_ACC;PJ;Livre
+Inadimplencia;21108;Inadimplência da carteira - Pessoas jurídicas - Financiamento a importações;INADI_PJ_FINIMPORTACOES;PJ;Livre
+Inadimplencia;21109;Inadimplência da carteira - Pessoas jurídicas - Financiamento a exportações;INADI_PJ_FINEXPORTACOES;PJ;Livre
+Inadimplencia;21110;Inadimplência da carteira - Pessoas jurídicas - Repasse externo;INADI_PJ_REPEXTERNO;PJ;Livre
+Inadimplencia;21111;Inadimplência da carteira - Pessoas jurídicas - Outros créditos livres;INADI_PJ_OUTROSLIVRES;PJ;Livre
+Inadimplencia;21112;Inadimplência da carteira - Pessoas físicas - Recurso Livre - Total;INADI_PF_RL_TOTAL;PF;Livre
+Inadimplencia;21113;Inadimplência da carteira - Pessoas físicas - Cheque especial;INADI_PF_CHQESPECIAL;PF;Livre
+Inadimplencia;21114;Inadimplência da carteira - Pessoas físicas - Crédito pessoal não consignado;INADI_PF_CRDPESNAOCONSIGNADO;PF;Livre
+Inadimplencia;21115;Inadimplência da carteira - Pessoas físicas - Crédito pessoal não consignado vinculado à composição de dívidas;INADI_PF_CRDPESNAOCONVINCOMP;PF;Livre
+Inadimplencia;21116;Inadimplência da carteira - Pessoas físicas - Crédito pessoal consignado para trabalhadores do setor privado;INADI_PF_CRDPESCONTRASETPRIVADO;PF;Livre
+Inadimplencia;21117;Inadimplência da carteira - Pessoas físicas - Crédito pessoal consignado para trabalhadores do setor público;INADI_PF_CRDPESCONTRASETPUBLICO;PF;Livre
+Inadimplencia;21118;Inadimplência da carteira - Pessoas físicas - Crédito pessoal consignado para aposentados e pensionistas do INSS;INADI_PF_CRDPESCONAPOINSS;PF;Livre
+Inadimplencia;21119;Inadimplência da carteira - Pessoas físicas - Crédito pessoal consignado total;INADI_PF_CRDPESCON_TOTAL;PF;Livre
+Inadimplencia;21120;Inadimplência da carteira - Pessoas físicas - Crédito pessoal total;INADI_PF_CRDPES_TOTAL;PF;Livre
+Inadimplencia;21121;Inadimplência da carteira - Pessoas físicas - Aquisição de veículos;INADI_PF_AQUVEICULOS;PF;Livre
+Inadimplencia;21122;Inadimplência da carteira - Pessoas físicas - Aquisição de outros bens;INADI_PF_AQUOUTBENS;PF;Livre
+Inadimplencia;21123;Inadimplência da carteira - Pessoas físicas - Aquisição de bens total;INADI_PF_AQUBENSTT;PF;Livre
+Inadimplencia;21124;Inadimplência da carteira - Pessoas físicas - Arrendamento mercantil de veículos;INADI_PF_ARRMERVEICULOS;PF;Livre
+Inadimplencia;21125;Inadimplência da carteira - Pessoas físicas - Arrendamento mercantil de outros bens;INADI_PF_ARRMEROUTBENS;PF;Livre
+Inadimplencia;21126;Inadimplência da carteira - Pessoas físicas - Arrendamento mercantil total;INADI_PF_ARRMERCTT;PF;Livre
+Inadimplencia;21127;Inadimplência da carteira - Pessoas físicas - Cartão de crédito rotativo;INADI_PF_CARCRDROTATIVO;PF;Livre
+Inadimplencia;21128;Inadimplência da carteira - Pessoas físicas - Cartão de crédito parcelado;INADI_PF_CARCRDPARCELADO;PF;Livre
+Inadimplencia;21129;Inadimplência da carteira - Pessoas físicas - Cartão de crédito total;INADI_PF_CARCRD_TOTAL;PF;Livre
+Inadimplencia;21130;Inadimplência da carteira - Pessoas físicas - Desconto de cheques;INADI_PF_DESCHEQUES;PF;Livre
+Inadimplencia;21131;Inadimplência da carteira - Pessoas físicas - Outros créditos livres;INADI_PF_OUTROSLIVRES;PF;Livre
+Inadimplencia;21132;Inadimplência da carteira - Direcionado - Total;INADI_RL_TOTAL;TT;Direcionado
+Inadimplencia;21133;Inadimplência da carteira - Pessoas jurídicas - Recurso Direcionado - Total;INADI_PJ_RD_TOTAL;PJ;Direcionado
+Inadimplencia;21134;Inadimplência da carteira - Pessoas jurídicas - Crédito rural com taxas de mercado;INADI_PJ_CRDRURMERCADO;PJ;Direcionado
+Inadimplencia;21135;Inadimplência da carteira - Pessoas jurídicas - Crédito rural com taxas reguladas;INADI_PJ_CRDRURREGULADAS;PJ;Direcionado
+Inadimplencia;21136;Inadimplência da carteira - Pessoas jurídicas - Crédito rural total;INADI_PJ_CRDRUR_TOTAL;PJ;Direcionado
+Inadimplencia;21137;Inadimplência da carteira - Pessoas jurídicas - Financiamento imobiliário com taxas de mercado;INADI_PJ_FINIMOBMERCADO;PJ;Direcionado
+Inadimplencia;21138;Inadimplência da carteira - Pessoas jurídicas - Financiamento imobiliário com taxas reguladas;INADI_PJ_FINIMOBREGULADAS;PJ;Direcionado
+Inadimplencia;21139;Inadimplência da carteira - Pessoas jurídicas - Financiamento imobiliário total;INADI_PJ_FINIMOB_TOTAL;PJ;Direcionado
+Inadimplencia;21140;Inadimplência da carteira - Pessoas jurídicas - Capital de giro com recursos do BNDES;INADI_PJ_CAPGIR_BNDES;PJ;Direcionado
+Inadimplencia;21141;Inadimplência da carteira - Pessoas jurídicas - Financiamento de investimentos com recursos do BNDES;INADI_PJ_FININVRECBNDES;PJ;Direcionado
+Inadimplencia;21142;Inadimplência da carteira - Pessoas jurídicas - Financiamento agroindustrial com recursos do BNDES;INADI_PJ_FINAGRRECBNDES;PJ;Direcionado
+Inadimplencia;21143;Inadimplência da carteira - Pessoas jurídicas - Financiamento com recursos do BNDES total;INADI_PJ_FINBNDESTT;PJ;Direcionado
+Inadimplencia;21144;Inadimplência da carteira - Pessoas jurídicas - Outros créditos direcionados;INADI_PJ_OUTROSDIRECIONADOS;PJ;Direcionado
+Inadimplencia;21145;Inadimplência da carteira - Pessoas físicas - Recurso Direcionado - Total;INADI_PF_RD_TOTAL;PF;Direcionado
+Inadimplencia;21146;Inadimplência da carteira - Pessoas físicas - Crédito rural com taxas de mercado;INADI_PF_CRDRURMERCADO;PF;Direcionado
+Inadimplencia;21147;Inadimplência da carteira - Pessoas físicas - Crédito rural com taxas reguladas;INADI_PF_CRDRURREGULADAS;PF;Direcionado
+Inadimplencia;21148;Inadimplência da carteira - Pessoas físicas - Crédito rural total;INADI_PF_CRDRUR_TOTAL;PF;Total
+Inadimplencia;21149;Inadimplência da carteira - Pessoas físicas - Financiamento imobiliário com taxas de mercado;INADI_PF_FINIMOBMERCADO;PF;Direcionado
+Inadimplencia;21150;Inadimplência da carteira - Pessoas físicas - Financiamento imobiliário com taxas reguladas;INADI_PF_FINIMOBREGULADAS;PF;Direcionado
+Inadimplencia;21151;Inadimplência da carteira - Pessoas físicas - Financiamento imobiliário total;INADI_PF_FINIMOB_TOTAL;PF;Direcionado
+Inadimplencia;21152;Inadimplência da carteira - Pessoas físicas - Capital de giro com recursos do BNDES;INADI_PF_CAPGIR_BNDES;PF;Direcionado
+Inadimplencia;21153;Inadimplência da carteira - Pessoas físicas - Financiamento de investimentos com recursos do BNDES;INADI_PF_FININVRECBNDES;PF;Direcionado
+Inadimplencia;21154;Inadimplência da carteira - Pessoas físicas - Financiamento agroindustrial com recursos do BNDES;INADI_PF_FINAGRRECBNDES;PF;Direcionado
+Inadimplencia;21155;Inadimplência da carteira - Pessoas físicas - Financiamento com recursos do BNDES total;INADI_PF_FINBNDESTT;PF;Direcionado
+Inadimplencia;21156;Inadimplência da carteira - Pessoas físicas - Microcrédito destinado a consumo;INADI_PF_MICCONSUMO;PF;Direcionado
+Inadimplencia;21157;Inadimplência da carteira - Pessoas físicas - Microcrédito destinado a microempreendedores;INADI_PF_MICMICROEMPREENDEDOR;PF;Direcionado
+Inadimplencia;21159;Inadimplência da carteira - Pessoas físicas - Microcrédito total;INADI_PF_MICTT;PF;Direcionado
+Inadimplencia;21160;Inadimplência da carteira - Pessoas físicas - Outros créditos direcionados;INADI_PF_OUTROSDIRECIONADOS;PF;Direcionado
+TaxaJurosAA;27626;Taxa média de juros - Parcelado - Recurso Livre - Total;TX1_PARCELADO_RL_TOTAL;TT;Livre
+TaxaJurosAA;27623;Taxa média de juros - Parcelado - Total;TX1_PARCELADO_TOTAL;TT;Total
+TaxaJurosAA;20751;Taxa média de juros - Pessoas físicas - Aquisição de bens total;TX1_PF_AQUBENSTT;PF;Total
+TaxaJurosAA;20750;Taxa média de juros - Pessoas físicas - Aquisição de outros bens;TX1_PF_AQUOUTBENS;PF;Livre
+TaxaJurosAA;20749;Taxa média de juros - Pessoas físicas - Aquisição de veículos;TX1_PF_AQUVEICULOS;PF;Livre
+TaxaJurosAA;20753;Taxa média de juros - Pessoas físicas - Arrendamento mercantil de outros bens;TX1_PF_ARRMEROUTBENS;PF;Livre
+TaxaJurosAA;20752;Taxa média de juros - Pessoas físicas - Arrendamento mercantil de veículos;TX1_PF_ARRMERVEICULOS;PF;Livre
+TaxaJurosAA;20754;Taxa média de juros - Pessoas físicas - Arrendamento mercantil total;TX1_PF_ARRMERCTT;PF;Total
+TaxaJurosAA;22023;Taxa média de juros - Pessoas físicas - Cartão de crédito parcelado;TX1_PF_CARCRDPARCELADO;PF;Livre
+TaxaJurosAA;22022;Taxa média de juros - Pessoas físicas - Cartão de crédito rotativo;TX1_PF_CARCRDROTATIVO;PF;Livre
+TaxaJurosAA;22024;Taxa média de juros - Pessoas físicas - Cartão de crédito total;TX1_PF_CARCRD_TOTAL;PF;Total
+TaxaJurosAA;20741;Taxa média de juros - Pessoas físicas - Cheque especial;TX1_PF_CHQESPECIAL;PF;Livre
+TaxaJurosAA;20746;Taxa média de juros - Pessoas físicas - Crédito pessoal consignado para aposentados e pensionistas do INSS;TX1_PF_CRDPESCONAPOINSS;PF;Livre
+TaxaJurosAA;20744;Taxa média de juros - Pessoas físicas - Crédito pessoal consignado para trabalhadores do setor privado;TX1_PF_CRDPESCONTRASETPRIVADO;PF;Livre
+TaxaJurosAA;20745;Taxa média de juros - Pessoas físicas - Crédito pessoal consignado para trabalhadores do setor público;TX1_PF_CRDPESCONTRASETPUBLICO;PF;Livre
+TaxaJurosAA;20747;Taxa média de juros - Pessoas físicas - Crédito pessoal consignado total;TX1_PF_CRDPESCON_TOTAL;PF;Total
+TaxaJurosAA;20742;Taxa média de juros - Pessoas físicas - Crédito pessoal não consignado;TX1_PF_CRDPESNAOCONSIGNADO;PF;Livre
+TaxaJurosAA;20743;Taxa média de juros - Pessoas físicas - Crédito pessoal não consignado vinculado à composição de dívidas;TX1_PF_CRDPESNAOCONVINCOMPOSICAO;PF;Livre
+TaxaJurosAA;20748;Taxa média de juros - Pessoas físicas - Crédito pessoal total;TX1_PF_CRDPES_TOTAL;PF;Total
+TaxaJurosAA;20769;Taxa média de juros - Pessoas físicas - Crédito rural com taxas de mercado;TX1_PF_CRDRURMERCADO;PF;Direcionado
+TaxaJurosAA;20770;Taxa média de juros - Pessoas físicas - Crédito rural com taxas reguladas;TX1_PF_CRDRURREGULADAS;PF;Direcionado
+TaxaJurosAA;20771;Taxa média de juros - Pessoas físicas - Crédito rural total;TX1_PF_CRDRUR_TOTAL;PF;Total
+TaxaJurosAA;20755;Taxa média de juros - Pessoas físicas - Desconto de cheques;TX1_PF_DESCHEQUES;PF;Livre
+TaxaJurosAA;20777;Taxa média de juros - Pessoas físicas - Financiamento agroindustrial com recursos do BNDES;TX1_PF_FINAGRRECBNDES;PF;Direcionado
+TaxaJurosAA;20778;Taxa média de juros - Pessoas físicas - Financiamento com recursos do BNDES total;TX1_PF_FINBNDESTT;PF;Total
+TaxaJurosAA;20776;Taxa média de juros - Pessoas físicas - Financiamento de investimentos com recursos do BNDES;TX1_PF_FININVRECBNDES;PF;Direcionado
+TaxaJurosAA;20772;Taxa média de juros - Pessoas físicas - Financiamento imobiliário com taxas de mercado;TX1_PF_FINIMOBMERCADO;PF;Direcionado
+TaxaJurosAA;20773;Taxa média de juros - Pessoas físicas - Financiamento imobiliário com taxas reguladas;TX1_PF_FINIMOBREGULADAS;PF;Direcionado
+TaxaJurosAA;20774;Taxa média de juros - Pessoas físicas - Financiamento imobiliário total;TX1_PF_FINIMOB_TOTAL;PF;Total
+TaxaJurosAA;20779;Taxa média de juros - Pessoas físicas - Microcrédito destinado a consumo;TX1_PF_MICCONSUMO;PF;Direcionado
+TaxaJurosAA;20780;Taxa média de juros - Pessoas físicas - Microcrédito destinado a microempreendedores;TX1_PF_MICMICROEMPREENDEDOR;PF;Direcionado
+TaxaJurosAA;20782;Taxa média de juros - Pessoas físicas - Microcrédito total;TX1_PF_MICTT;PF;Total
+TaxaJurosAA;27628;Taxa média de juros - Pessoas físicas - Parcelado - Recurso Livre - Total;TX1_PF_PARCELADO_RL_TOTAL;PF;Livre
+TaxaJurosAA;27625;Taxa média de juros - Pessoas físicas - Parcelado - Total;TX1_PF_PARCELADO_TOTAL;PF;Total
+TaxaJurosAA;20768;Taxa média de juros - Pessoas físicas - Recurso Direcionado - Total;TX1_PF_RD_TOTAL;PF;Direcionado
+TaxaJurosAA;20740;Taxa média de juros - Pessoas físicas - Recurso Livre - Total;TX1_PF_RL_TOTAL;PF;Livre
+TaxaJurosAA;20716;Taxa média de juros - Pessoas físicas - Total;TX1_PF_TOTAL;PF;Total
+TaxaJurosAA;20736;Taxa média de juros - Pessoas jurídicas - Adiantamento sobre contratos de câmbio (ACC);TX1_PJ_ACC;PJ;Livre
+TaxaJurosAA;20721;Taxa média de juros - Pessoas jurídicas - Antecipação de faturas de cartão de crédito;TX1_PJ_ANTFATCARCREDITO;PJ;Livre
+TaxaJurosAA;20730;Taxa média de juros - Pessoas jurídicas - Aquisição de bens total;TX1_PJ_AQUBENSTT;PJ;Total
+TaxaJurosAA;20729;Taxa média de juros - Pessoas jurídicas - Aquisição de outros bens;TX1_PJ_AQUOUTBENS;PJ;Livre
+TaxaJurosAA;20728;Taxa média de juros - Pessoas jurídicas - Aquisição de veículos;TX1_PJ_AQUVEICULOS;PJ;Livre
+TaxaJurosAA;20732;Taxa média de juros - Pessoas jurídicas - Arrendamento mercantil de outros bens;TX1_PJ_ARRMEROUTBENS;PJ;Livre
+TaxaJurosAA;20731;Taxa média de juros - Pessoas jurídicas - Arrendamento mercantil de veículos;TX1_PJ_ARRMERVEICULOS;PJ;Livre
+TaxaJurosAA;20733;Taxa média de juros - Pessoas jurídicas - Arrendamento mercantil total;TX1_PJ_ARRMERCTT;PJ;Total
+TaxaJurosAA;20722;Taxa média de juros - Pessoas jurídicas - Capital de giro com prazo de até 365 dias;TX1_PJ_CAPGIRPRZATE365;PJ;Livre
+TaxaJurosAA;20723;Taxa média de juros - Pessoas jurídicas - Capital de giro com prazo superior a 365 dias;TX1_PJ_CAPGIRPRZSUP365;PJ;Livre
+TaxaJurosAA;20764;Taxa média de juros - Pessoas jurídicas - Capital de giro com recursos do BNDES;TX1_PJ_CAPGIR_BNDES;PJ;Direcionado
+TaxaJurosAA;20724;Taxa média de juros - Pessoas jurídicas - Capital de giro rotativo;TX1_PJ_CAPGIRROTATIVO;PJ;Livre
+TaxaJurosAA;20725;Taxa média de juros - Pessoas jurídicas - Capital de giro total;TX1_PJ_CAPGIR_TOTAL;PJ;Total
+TaxaJurosAA;22020;Taxa média de juros - Pessoas jurídicas - Cartão de crédito parcelado;TX1_PJ_CARCRDPARCELADO;PJ;Livre
+TaxaJurosAA;22019;Taxa média de juros - Pessoas jurídicas - Cartão de crédito rotativo;TX1_PJ_CARCRDROTATIVO;PJ;Livre
+TaxaJurosAA;22021;Taxa média de juros - Pessoas jurídicas - Cartão de crédito total;TX1_PJ_CARCRD_TOTAL;PJ;Total
+TaxaJurosAA;20727;Taxa média de juros - Pessoas jurídicas - Cheque especial;TX1_PJ_CHQESPECIAL;PJ;Livre
+TaxaJurosAA;20735;Taxa média de juros - Pessoas jurídicas - Compror;TX1_PJ_COMPROR;PJ;Livre
+TaxaJurosAA;20726;Taxa média de juros - Pessoas jurídicas - Conta garantida;TX1_PJ_CONGARANTIDA;PJ;Livre
+TaxaJurosAA;20758;Taxa média de juros - Pessoas jurídicas - Crédito rural com taxas de mercado;TX1_PJ_CRDRURMERCADO;PJ;Direcionado
+TaxaJurosAA;20759;Taxa média de juros - Pessoas jurídicas - Crédito rural com taxas reguladas;TX1_PJ_CRDRURREGULADAS;PJ;Direcionado
+TaxaJurosAA;20760;Taxa média de juros - Pessoas jurídicas - Crédito rural total;TX1_PJ_CRDRUR_TOTAL;PJ;Total
+TaxaJurosAA;20720;Taxa média de juros - Pessoas jurídicas - Desconto de cheques;TX1_PJ_DESCHEQUES;PJ;Livre
+TaxaJurosAA;20719;Taxa média de juros - Pessoas jurídicas - Desconto de duplicatas e recebíveis;TX1_PJ_DESDUPLICATAS;PJ;Livre
+TaxaJurosAA;20738;Taxa média de juros - Pessoas jurídicas - Financiamento a exportações;TX1_PJ_FINEXPORTACOES;PJ;Livre
+TaxaJurosAA;20737;Taxa média de juros - Pessoas jurídicas - Financiamento a importações;TX1_PJ_FINIMPORTACOES;PJ;Livre
+TaxaJurosAA;20766;Taxa média de juros - Pessoas jurídicas - Financiamento agroindustrial com recursos do BNDES;TX1_PJ_FINAGRRECBNDES;PJ;Direcionado
+TaxaJurosAA;20767;Taxa média de juros - Pessoas jurídicas - Financiamento com recursos do BNDES total;TX1_PJ_FINBNDESTT;PJ;Total
+TaxaJurosAA;20765;Taxa média de juros - Pessoas jurídicas - Financiamento de investimentos com recursos do BNDES;TX1_PJ_FININVRECBNDES;PJ;Direcionado
+TaxaJurosAA;20761;Taxa média de juros - Pessoas jurídicas - Financiamento imobiliário com taxas de mercado;TX1_PJ_FINIMOBMERCADO;PJ;Direcionado
+TaxaJurosAA;20762;Taxa média de juros - Pessoas jurídicas - Financiamento imobiliário com taxas reguladas;TX1_PJ_FINIMOBREGULADAS;PJ;Direcionado
+TaxaJurosAA;20763;Taxa média de juros - Pessoas jurídicas - Financiamento imobiliário total;TX1_PJ_FINIMOB_TOTAL;PJ;Total
+TaxaJurosAA;27627;Taxa média de juros - Pessoas jurídicas - Parcelado - Recurso Livre - Total;TX1_PJ_PARCELADO_RL_TOTAL;PJ;Livre
+TaxaJurosAA;27624;Taxa média de juros - Pessoas jurídicas - Parcelado - Total;TX1_PJ_PARCELADO_TOTAL;PJ;Total
+TaxaJurosAA;20757;Taxa média de juros - Pessoas jurídicas - Recurso Direcionado - Total;TX1_PJ_RD_TOTAL;PJ;Direcionado
+TaxaJurosAA;20718;Taxa média de juros - Pessoas jurídicas - Recurso Livre - Total;TX1_PJ_RL_TOTAL;PJ;Livre
+TaxaJurosAA;20739;Taxa média de juros - Pessoas jurídicas - Repasse externo;TX1_PJ_REPEXTERNO;PJ;Livre
+TaxaJurosAA;20715;Taxa média de juros - Pessoas jurídicas - Total;TX1_PJ_TOTAL;PJ;Total
+TaxaJurosAA;20734;Taxa média de juros - Pessoas jurídicas - Vendor;TX1_PJ_VENDOR;PJ;Livre
+TaxaJurosAA;20756;Taxa média de juros - Recurso Direcionado - Total;TX1_RD_TOTAL;TT;Direcionado
+TaxaJurosAA;20717;Taxa média de juros - Recurso Livre -  Total;TX1_RL_TOTAL;TT;Livre
+TaxaJurosAA;20714;Taxa média de juros - Total;TX1_TOTAL;TT;Total
+TaxaJurosAM;25486;Taxa média mensal de juros - Pessoas jurídicas - Financiamento imobiliário com taxas de mercado;TX2_PJ_FINIMOBMERCADO;PJ;Direcionado
+TaxaJurosAM;25483;Taxa média mensal de juros - Pessoas jurídicas - Crédito rural com taxas de mercado;TX2_PJ_CRDRURMERCADO;PJ;Direcionado
+TaxaJurosAM;25484;Taxa média mensal de juros - Pessoas jurídicas - Crédito rural com taxas reguladas;TX2_PJ_CRDRURREGULADAS;PJ;Direcionado
+TaxaJurosAM;25487;Taxa média mensal de juros - Pessoas jurídicas - Financiamento imobiliário com taxas reguladas;TX2_PJ_FINIMOBREGULADAS;PJ;Direcionado
+TaxaJurosAM;25489;Taxa média mensal de juros - Pessoas jurídicas - Capital de giro com recursos do BNDES;TX2_PJ_CAPGIR_BNDES;PJ;Direcionado
+TaxaJurosAM;25490;Taxa média mensal de juros - Pessoas jurídicas - Financiamento de investimentos com recursos do BNDES;TX2_PJ_FININVRECBNDES;PJ;Direcionado
+TaxaJurosAM;25491;Taxa média mensal de juros - Pessoas jurídicas - Financiamento agroindustrial com recursos do BNDES;TX2_PJ_FINAGRRECBNDES;PJ;Direcionado
+TaxaJurosAM;25497;Taxa média mensal de juros - Pessoas físicas - Financiamento imobiliário com taxas de mercado;TX2_PF_FINIMOBMERCADO;PF;Direcionado
+TaxaJurosAM;25494;Taxa média mensal de juros - Pessoas físicas - Crédito rural com taxas de mercado;TX2_PF_CRDRURMERCADO;PF;Direcionado
+TaxaJurosAM;25495;Taxa média mensal de juros - Pessoas físicas - Crédito rural com taxas reguladas;TX2_PF_CRDRURREGULADAS;PF;Direcionado
+TaxaJurosAM;25498;Taxa média mensal de juros - Pessoas físicas - Financiamento imobiliário com taxas reguladas;TX2_PF_FINIMOBREGULADAS;PF;Direcionado
+TaxaJurosAM;25501;Taxa média mensal de juros - Pessoas físicas - Financiamento de investimentos com recursos do BNDES;TX2_PF_FININVRECBNDES;PF;Direcionado
+TaxaJurosAM;25502;Taxa média mensal de juros - Pessoas físicas - Financiamento agroindustrial com recursos do BNDES;TX2_PF_FINAGRRECBNDES;PF;Direcionado
+TaxaJurosAM;25504;Taxa média mensal de juros - Pessoas físicas - Microcrédito destinado a consumo;TX2_PF_MICCONSUMO;PF;Direcionado
+TaxaJurosAM;25505;Taxa média mensal de juros - Pessoas físicas - Microcrédito destinado a microempreendedores;TX2_PF_MICMICROEMPREENDEDOR;PF;Direcionado
+TaxaJurosAM;25493;Taxa média mensal de juros - Pessoas físicas  - Recurso Direcionado - Total;TX2_PF_RD_TOTAL;PF;Direcionado
+TaxaJurosAM;25482;Taxa média mensal de juros - Pessoas jurídicas  - Recurso Direcionado - Total;TX2_PJ_RD_TOTAL;PJ;Direcionado
+TaxaJurosAM;25481;Taxa média mensal de juros - Recurso Direcionado - Total;TX2_RD_TOTAL;TT;Direcionado
+TaxaJurosAM;25438;Taxa média mensal de juros - Pessoas jurídicas - Desconto de duplicatas e recebíveis;TX2_PJ_DESDUPLICATAS;PJ;Livre
+TaxaJurosAM;25439;Taxa média mensal de juros - Pessoas jurídicas - Desconto de cheques;TX2_PJ_DESCHEQUES;PJ;Livre
+TaxaJurosAM;25440;Taxa média mensal de juros - Pessoas jurídicas - Antecipação de faturas de cartão de crédito;TX2_PJ_ANTFATCARCREDITO;PJ;Livre
+TaxaJurosAM;25441;Taxa média mensal de juros - Pessoas jurídicas - Capital de giro com prazo de até 365 dias;TX2_PJ_CAPGIRPRZATE365;PJ;Livre
+TaxaJurosAM;25442;Taxa média mensal de juros - Pessoas jurídicas - Capital de giro com prazo superior a 365 dias;TX2_PJ_CAPGIRPRZSUP365;PJ;Livre
+TaxaJurosAM;25443;Taxa média mensal de juros - Pessoas jurídicas - Capital de giro rotativo;TX2_PJ_CAPGIRROTATIVO;PJ;Livre
+TaxaJurosAM;25445;Taxa média mensal de juros - Pessoas jurídicas - Conta garantida;TX2_PJ_CONGARANTIDA;PJ;Livre
+TaxaJurosAM;25446;Taxa média mensal de juros - Pessoas jurídicas - Cheque especial;TX2_PJ_CHQESPECIAL;PJ;Livre
+TaxaJurosAM;25447;Taxa média mensal de juros - Pessoas jurídicas - Aquisição de veículos;TX2_PJ_AQUVEICULOS;PJ;Livre
+TaxaJurosAM;25448;Taxa média mensal de juros - Pessoas jurídicas - Aquisição de outros bens;TX2_PJ_AQUOUTBENS;PJ;Livre
+TaxaJurosAM;25450;Taxa média mensal de juros - Pessoas jurídicas - Arrendamento mercantil de veículos;TX2_PJ_ARRMERVEICULOS;PJ;Livre
+TaxaJurosAM;25451;Taxa média mensal de juros - Pessoas jurídicas - Arrendamento mercantil de outros bens;TX2_PJ_ARRMEROUTBENS;PJ;Livre
+TaxaJurosAM;25453;Taxa média mensal de juros - Pessoas jurídicas - Vendor;TX2_PJ_VENDOR;PJ;Livre
+TaxaJurosAM;25454;Taxa média mensal de juros - Pessoas jurídicas - Compror;TX2_PJ_COMPROR;PJ;Livre
+TaxaJurosAM;25455;Taxa média mensal de juros - Pessoas jurídicas - Cartão de crédito rotativo;TX2_PJ_CARCRDROTATIVO;PJ;Livre
+TaxaJurosAM;25456;Taxa média mensal de juros - Pessoas jurídicas - Cartão de crédito parcelado;TX2_PJ_CARCRDPARCELADO;PJ;Livre
+TaxaJurosAM;25458;Taxa média mensal de juros - Pessoas jurídicas - Adiantamento sobre contratos de câmbio (ACC);TX2_PJ_ACC;PJ;Livre
+TaxaJurosAM;25459;Taxa média mensal de juros - Pessoas jurídicas - Financiamento a importações;TX2_PJ_FINIMPORTACOES;PJ;Livre
+TaxaJurosAM;25460;Taxa média mensal de juros - Pessoas jurídicas - Financiamento a exportações;TX2_PJ_FINEXPORTACOES;PJ;Livre
+TaxaJurosAM;25461;Taxa média mensal de juros - Pessoas jurídicas - Repasse externo;TX2_PJ_REPEXTERNO;PJ;Livre
+TaxaJurosAM;25463;Taxa média mensal de juros - Pessoas físicas - Cheque especial;TX2_PF_CHQESPECIAL;PF;Livre
+TaxaJurosAM;25464;Taxa média mensal de juros - Pessoas físicas - Crédito pessoal não consignado;TX2_PF_CRDPESNAOCONSIGNADO;PF;Livre
+TaxaJurosAM;25465;Taxa média mensal de juros - Pessoas físicas - Crédito pessoal não consignado vinculado à composição de dívidas;TX2_PF_CRDPESNAOCONVINCOMPOSICAO;PF;Livre
+TaxaJurosAM;25467;Taxa média mensal de juros - Pessoas físicas - Crédito pessoal consignado para trabalhadores do setor público;TX2_PF_CRDPESCONTRASETPUBLICO;PF;Livre
+TaxaJurosAM;25466;Taxa média mensal de juros - Pessoas físicas - Crédito pessoal consignado para trabalhadores do setor privado;TX2_PF_CRDPESCONTRASETPRIVADO;PF;Livre
+TaxaJurosAM;25468;Taxa média mensal de juros - Pessoas físicas - Crédito pessoal consignado para aposentados e pensionistas do INSS;TX2_PF_CRDPESCONAPOINSS;PF;Livre
+TaxaJurosAM;25471;Taxa média mensal de juros - Pessoas físicas - Aquisição de veículos;TX2_PF_AQUVEICULOS;PF;Livre
+TaxaJurosAM;25472;Taxa média mensal de juros - Pessoas físicas - Aquisição de outros bens;TX2_PF_AQUOUTBENS;PF;Livre
+TaxaJurosAM;25477;Taxa média mensal de juros - Pessoas físicas - Cartão de crédito rotativo;TX2_PF_CARCRDROTATIVO;PF;Livre
+TaxaJurosAM;25478;Taxa média mensal de juros - Pessoas físicas - Cartão de crédito parcelado;TX2_PF_CARCRDPARCELADO;PF;Livre
+TaxaJurosAM;25474;Taxa média mensal de juros - Pessoas físicas - Arrendamento mercantil de veículos;TX2_PF_ARRMERVEICULOS;PF;Livre
+TaxaJurosAM;25475;Taxa média mensal de juros - Pessoas físicas - Arrendamento mercantil de outros bens;TX2_PF_ARRMEROUTBENS;PF;Livre
+TaxaJurosAM;25480;Taxa média mensal de juros - Pessoas físicas - Desconto de cheques;TX2_PF_DESCHEQUES;PF;Livre
+TaxaJurosAM;27641;Taxa média mensal de juros - Parcelado - Recurso Livre - Total;TX2_PARCELADO_RL_TOTAL;TT;Livre
+TaxaJurosAM;27643;Taxa média mensal de juros - Pessoas físicas - Parcelado - Recurso Livre - Total;TX2_PF_PARCELADO_RL_TOTAL;PF;Livre
+TaxaJurosAM;25462;Taxa média mensal de juros - Pessoas físicas  - Recurso Livre - Total;TX2_PF_RL_TOTAL;PF;Livre
+TaxaJurosAM;27642;Taxa média mensal de juros - Pessoas jurídicas - Parcelado - Recurso Livre - Total;TX2_PJ_PARCELADO_RL_TOTAL;PJ;Livre
+TaxaJurosAM;25437;Taxa média mensal de juros - Pessoas jurídicas  - Recurso Livre - Total;TX2_PJ_RL_TOTAL;PJ;Livre
+TaxaJurosAM;25436;Taxa média mensal de juros - Recurso Livre - Total;TX2_RL_TOTAL;TT;Livre
+TaxaJurosAM;27638;Taxa média mensal de juros - Parcelado - Total;TX2_PARCELADO_TOTAL;TT;Total
+TaxaJurosAM;25473;Taxa média mensal de juros - Pessoas físicas - Aquisição de bens total;TX2_PF_AQUBENSTT;PF;Total
+TaxaJurosAM;25476;Taxa média mensal de juros - Pessoas físicas - Arrendamento mercantil total;TX2_PF_ARRMERCTT;PF;Total
+TaxaJurosAM;25479;Taxa média mensal de juros - Pessoas físicas - Cartão de crédito total;TX2_PF_CARCRD_TOTAL;PF;Total
+TaxaJurosAM;25470;Taxa média mensal de juros - Pessoas físicas - Crédito pessoal total;TX2_PF_CRDPES_TOTAL;PF;Total
+TaxaJurosAM;25469;Taxa média mensal de juros - Pessoas físicas - Crédito pessoal consignado total;TX2_PF_CRDPESCON_TOTAL;PF;Total
+TaxaJurosAM;25496;Taxa média mensal de juros - Pessoas físicas - Crédito rural total;TX2_PF_CRDRUR_TOTAL;PF;Total
+TaxaJurosAM;25503;Taxa média mensal de juros - Pessoas físicas - Financiamento com recursos do BNDES total;TX2_PF_FINBNDESTT;PF;Total
+TaxaJurosAM;25499;Taxa média mensal de juros - Pessoas físicas - Financiamento imobiliário total;TX2_PF_FINIMOB_TOTAL;PF;Total
+TaxaJurosAM;25507;Taxa média mensal de juros - Pessoas físicas - Microcrédito total;TX2_PF_MICTT;PF;Total
+TaxaJurosAM;27640;Taxa média mensal de juros - Pessoas físicas - Parcelado - Total;TX2_PF_PARCELADO_TOTAL;PF;Total
+TaxaJurosAM;25435;Taxa média mensal de juros - Pessoas físicas - Total;TX2_PF_TOTAL;PF;Total
+TaxaJurosAM;25449;Taxa média mensal de juros - Pessoas jurídicas - Aquisição de bens total;TX2_PJ_AQUBENSTT;PJ;Total
+TaxaJurosAM;25452;Taxa média mensal de juros - Pessoas jurídicas - Arrendamento mercantil total;TX2_PJ_ARRMERCTT;PJ;Total
+TaxaJurosAM;25444;Taxa média mensal de juros - Pessoas jurídicas - Capital de giro total;TX2_PJ_CAPGIR_TOTAL;PJ;Total
+TaxaJurosAM;25457;Taxa média mensal de juros - Pessoas jurídicas - Cartão de crédito total;TX2_PJ_CARCRD_TOTAL;PJ;Total
+TaxaJurosAM;25485;Taxa média mensal de juros - Pessoas jurídicas - Crédito rural total;TX2_PJ_CRDRUR_TOTAL;PJ;Total
+TaxaJurosAM;25492;Taxa média mensal de juros - Pessoas jurídicas - Financiamento com recursos do BNDES total;TX2_PJ_FINBNDESTT;PJ;Total
+TaxaJurosAM;25488;Taxa média mensal de juros - Pessoas jurídicas - Financiamento imobiliário total;TX2_PJ_FINIMOB_TOTAL;PJ;Total
+TaxaJurosAM;27639;Taxa média mensal de juros - Pessoas jurídicas - Parcelado - Total;TX2_PJ_PARCELADO_TOTAL;PJ;Total
+TaxaJurosAM;25434;Taxa média mensal de juros - Pessoas jurídicas - Total;TX2_PJ_TOTAL;PJ;Total
+TaxaJurosAM;25433;Taxa média mensal de juros - Total;TX2_TOTAL;TT;Total
+Spread;27636;Spread médio - não rotativo - Pessoas físicas  - Recurso Livre - Total;SPRD_PARCELADO_PF_RL_TOTAL;PF;Livre
+Spread;27633;Spread médio - não rotativo - Pessoas físicas - Total;SPRD_PARCELADO_PF_TOTAL;PF;Total
+Spread;27635;Spread médio - não rotativo - Pessoas jurídicas  - Recurso Livre - Total;SPRD_PARCELADO_PJ_RL_TOTAL;PJ;Livre
+Spread;27632;Spread médio - não rotativo - Pessoas jurídicas - Total;SPRD_PARCELADO_PJ_TOTAL;PJ;Total
+Spread;27634;Spread médio - não rotativo - Recurso Livre - Total;SPRD_PARCELADO_RL_TOTAL;TT;Livre
+Spread;27631;Spread médio - não rotativo - Total;SPRD_PARCELADO_TOTAL;TT;Total
+Spread;20809;Spread médio - Pessoas físicas - Recurso Livre - Total;SPRD_PF_RL_TOTAL;PF;Livre
+Spread;20837;Spread médio - Pessoas físicas - Recurso Direcionado - Total;SPRD_PF_RD_TOTAL;PF;direcionado
+Spread;20785;Spread médio - Pessoas físicas - Total;SPRD_PF_TOTAL;PF;Total
+Spread;20826;Spread médio - Pessoas jurídicas - Recurso Direcionado - Total;SPRD_PJ_RD_TOTAL;PJ;direcionado
+Spread;20787;Spread médio - Pessoas jurídicas - Recurso Livre - Total;SPRD_PJ_RL_TOTAL;PJ;Livre
+Spread;20784;Spread médio - Pessoas jurídicas - Total;SPRD_PJ_TOTAL;PJ;Total
+Spread;20825;Spread médio - Recurso Direcionado - Total;SPRD_RD_TOTAL;TT;direcionado
+Spread;20786;Spread médio - Recurso Livre - Total;SPRD_RL_TOTAL;TT;Livre
+Spread;20783;Spread médio - Total;SPRD_TOTAL;TT;Total
+SpreadICC;27697;Spread ICC - Crédito não rotativo - Pessoas físicas;SPRD_ICC_PARCELADO_PF_TOTAL;PF;Total
+SpreadICC;27696;Spread ICC - Crédito não rotativo - Pessoas jurídicas;SPRD_ICC_PARCELADO_PJ_TOTAL;PJ;Total
+SpreadICC;27698;Spread ICC - Crédito não rotativo - Recursos livres;SPRD_ICC_PARCELADO_RL_TOTAL;TT;Livre
+SpreadICC;27700;Spread ICC - Crédito não rotativo - Recursos livres - Pessoas físicas;SPRD_ICC_PARCELADO_PF_RL_TOTAL;PF;Livre
+SpreadICC;27699;Spread ICC - Crédito não rotativo - Recursos livres - Pessoas jurídicas;SPRD_ICC_PARCELADO_PJ_RL_TOTAL;PJ;Livre
+SpreadICC;27695;Spread ICC - Crédito não rotativo - Total;SPRD_ICC_PARCELADO_TOTAL;TT;Total
+SpreadICC;27445;Spread ICC - Pessoas físicas - Total;SPRD_ICC_PF_TOTAL;PF;Total
+SpreadICC;27444;Spread ICC - Pessoas jurídicas - Total;SPRD_ICC_PJ_TOTAL;PJ;Total
+SpreadICC;27451;Spread ICC - Recursos direcionados - Pessoas físicas - Total;SPRD_ICC_PF_RD_TOTAL;PF;Direcionado
+SpreadICC;27450;Spread ICC - Recursos direcionados - Pessoas jurídicas - Total;SPRD_ICC_PJ_RD_TOTAL;PJ;Direcionado
+SpreadICC;27449;Spread ICC - Recursos direcionados - Total;SPRD_ICC_RD_TOTAL;TT;Direcionado
+SpreadICC;27448;Spread ICC - Recursos livres - Pessoas físicas - Total;SPRD_ICC_PF_RL_TOTAL;PF;Livre
+SpreadICC;27447;Spread ICC - Recursos livres - Pessoas jurídicas - Total;SPRD_ICC_PJ_RL_TOTAL;PJ;Livre
+SpreadICC;27446;Spread ICC - Recursos livres - Total;SPRD_ICC_RL_TOTAL;TT;Livre
+SpreadICC;27443;Spread ICC - Total;SPRD_ICC_TOTAL;TT;Total
