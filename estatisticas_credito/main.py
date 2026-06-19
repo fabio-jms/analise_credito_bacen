@@ -6,9 +6,14 @@ import requests
 
 # Configurações - Nome atualizado conforme solicitado!
 arquivo_planilha = "codigos_series_bacen.csv"
-pasta_destino = "dados_brutos"
+pasta_destino = "dados_brutos_sgs"
 arquivo_log = "execucao.log"
 
+# 1. Descobre o caminho absoluto da pasta onde este script (main.py) está salvo
+caminho_da_pasta_do_script = os.path.dirname(os.path.abspath(__file__))
+
+# 2. Junta essa pasta com o nome do CSV, criando o caminho perfeito
+caminho_csv = os.path.join(caminho_da_pasta_do_script, arquivo_planilha)
 
 def registrar_log(mensagem):
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -23,7 +28,7 @@ with open(arquivo_log, "w", encoding="utf-8") as f:
 
 # Ler planilha
 try:
-    df_planilha = pd.read_csv(arquivo_planilha, sep=";")
+    df_planilha = pd.read_csv(caminho_csv, sep=";")
     df_planilha.columns = df_planilha.columns.str.strip()
 except Exception as e:
     registrar_log(f"ERRO CRÍTICO ao ler a planilha: {e}")
@@ -104,19 +109,31 @@ for index, linha in df_planilha.iterrows():
 
     time.sleep(0.5)
 
-# Repescagem (Retry)
+# # Repescagem (Retry)
 if lista_falhas:
     registrar_log(f"\n=== REPESCAGEM: {len(lista_falhas)} SÉRIES FALHARAM ===")
     time.sleep(3)
-    for index, linha in enumerate(lista_falhas.copy()):
+    
+    # Criamos uma lista simples para anotar os códigos que conseguimos recuperar
+    codigos_recuperados = []
+    
+    # Sendo uma lista pura, percorremos direto usando o enumerate para ter o index
+    for index, linha in enumerate(lista_falhas):
         codigo = linha["CODIGO"]
         nome_arquivo = linha["NOME_ABREV"]
         classe = linha["Classe"]
 
         sucesso_retry = executar_download_incremental(index, len(lista_falhas), codigo, nome_arquivo, classe, tentativa=2)
+        
         if sucesso_retry:
-            lista_falhas.remove(linha)
+            # Anotamos o código de sucesso
+            codigos_recuperados.append(codigo)
+            
         time.sleep(0.5)
+        
+    # --- FIM DO LOOP: Filtramos a lista mantendo apenas quem NÃO foi recuperado ---
+    if codigos_recuperados:
+        lista_falhas = [linha for linha in lista_falhas if linha["CODIGO"] not in codigos_recuperados]
 
 registrar_log("\n=== EXECUÇÃO CONCLUÍDA ===")
 registrar_log(f"Pendências restantes: {len(lista_falhas)}")
