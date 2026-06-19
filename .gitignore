@@ -1,4 +1,6 @@
-dados_brutos/
+dados_brutos_sgs/
+dados_brutos_scrdata/
+scrdata/resultados/
 execucao.log
 resumo_estatistico_credito_*.csv
-dados_scr_brutos/
+codigos_series_bacen.csv
