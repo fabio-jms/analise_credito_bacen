@@ -3,22 +3,28 @@ import numpy as np  # Mover para cá! Carrega uma única vez e fica disponível 
 import pandas as pd
 
 # 1. Configurações de caminhos
-pasta_dados = "dados_brutos"
+pasta_dados = "dados_brutos_sgs"
 arquivo_planilha = "codigos_series_bacen.csv"
-arquivo_saida = "resumo_estatistico_credito.csv"
+pasta_arquivo_saida = "estatisticas_credito/resultados/"
+
+# 2. Descobre o caminho absoluto da pasta onde este script (main.py) está salvo
+caminho_da_pasta_do_script = os.path.dirname(os.path.abspath(__file__))
+
+# 3. Junta essa pasta com o nome do CSV, criando o caminho perfeito
+caminho_csv = os.path.join(caminho_da_pasta_do_script, arquivo_planilha)
 
 # Verificar se os arquivos necessários existem
 if not os.path.exists(pasta_dados):
     print(f"Erro: A pasta '{pasta_dados}' não existe. Rode o 'main.py' primeiro!")
     exit()
 
-if not os.path.exists(arquivo_planilha):
-    print(f"Erro: A planilha '{arquivo_planilha}' não foi encontrada na raiz!")
+if not os.path.exists(caminho_csv):
+    print(f"Erro: A planilha '{caminho_csv}' não foi encontrada na raiz!")
     exit()
 
-# 2. Criar um mapeamento (Dicionário) do Código para o Nome Completo da série
-print(f"Carregando mapeamento de nomes a partir de: {arquivo_planilha}")
-df_referencia = pd.read_csv(arquivo_planilha, sep=";")
+# 4. Criar um mapeamento (Dicionário) do Código para o Nome Completo da série
+print(f"Carregando mapeamento de nomes a partir de: {caminho_csv}")
+df_referencia = pd.read_csv(caminho_csv, sep=";")
 df_referencia.columns = df_referencia.columns.str.strip()
 
 # Criamos um dicionário onde a CHAVE é o Código e o VALOR é o Nome Completo
@@ -26,7 +32,7 @@ df_referencia.columns = df_referencia.columns.str.strip()
 mapa_nomes_completos = dict(zip(df_referencia["CODIGO"].astype(str), df_referencia["NOME"]))
 
 
-# 3. Listar todos os arquivos CSV que estão dentro da pasta dados_brutos
+# 5. Listar todos os arquivos CSV que estão dentro da pasta dados_brutos
 arquivos = [f for f in os.listdir(pasta_dados) if f.endswith(".csv")]
 
 if not arquivos:
@@ -37,7 +43,7 @@ print(f"Encontrados {len(arquivos)} arquivos. Iniciando consolidação com nomes
 
 dados_consolidados = []
 
-# 4. Varrer arquivo por arquivo de forma automática
+# 6. Varrer arquivo por arquivo de forma automática
 for index, nome_arquivo in enumerate(arquivos):
     caminho_completo = os.path.join(pasta_dados, nome_arquivo)
     
@@ -112,7 +118,7 @@ for index, nome_arquivo in enumerate(arquivos):
     except Exception as e:
         print(f"  -> Erro ao processar o arquivo {nome_arquivo}: {e}")
 
-# 6. Salvar relatório final consolidado dinamicamente com a data da carga
+# 7. Salvar relatório final consolidado dinamicamente com a data da carga
 if dados_consolidados:
     df_final = pd.DataFrame(dados_consolidados)
     
@@ -133,7 +139,8 @@ if dados_consolidados:
     sufixo_data = maior_data.strftime("%Y%m")
     
     # 3. Montamos o nome do arquivo final com o carimbo de data (ex: resumo_estatistico_credito_202606.csv)
-    arquivo_saida_dinamico = f"resumo_estatistico_credito_{sufixo_data}.csv"
+    arquivo_saida_dinamico = f"{pasta_arquivo_saida}resumo_estatistico_credito_{sufixo_data}.csv"
+
     
     # 4. Salvamos a tabela com a formatação perfeita para o Excel
     df_final.to_csv(
