@@ -2,9 +2,9 @@ import os
 import pandas as pd
 
 # 1. Definir qual arquivo queremos analisar
-pasta_dados = "dados_brutos"
+pasta_dados = "dados_brutos_sgs"
 # Usando o novo padrão de nome (Classe_NOME_ABREV.csv)
-nome_arquivo = "Saldo_SALDO_PF_TOTAL.csv" 
+nome_arquivo = "Saldo_20541_SALDO_PF_TOTAL.csv" 
 caminho_arquivo = os.path.join(pasta_dados, nome_arquivo)
 
 # Verificar se o arquivo existe antes de continuar
