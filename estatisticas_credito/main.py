@@ -27,7 +27,7 @@ try:
     df_planilha.columns = df_planilha.columns.str.strip()
 except Exception as e:
     registrar_log(f"ERRO CRÍTICO ao ler a planilha: {e}")
-    exit()
+    exit()  
 
 if not os.path.exists(pasta_destino):
     os.makedirs(pasta_destino)

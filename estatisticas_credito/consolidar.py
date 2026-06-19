@@ -1,4 +1,5 @@
 import os
+import numpy as np  # Mover para cá! Carrega uma única vez e fica disponível para todo o script
 import pandas as pd
 
 # 1. Configurações de caminhos
@@ -68,7 +69,7 @@ for index, nome_arquivo in enumerate(arquivos):
         # O .get() serve para trazer um texto padrão caso o código não seja achado na planilha
         nome_completo_serie = mapa_nomes_completos.get(codigo_serie_str, "Nome não encontrado na planilha")
 
-        # --- REPLICAR OS CÁLCULOS ---
+        # --- REPLICAR OS CÁLCULOS (COM PROTEÇÃO CONTRA INFINITO) ---
         media_historica = df["valor"].mean()
         ultimo_valor = df["valor"].iloc[-1]
         ultima_data = df["data"].iloc[-1].strftime("%d/%m/%Y")
@@ -77,9 +78,16 @@ for index, nome_arquivo in enumerate(arquivos):
         pico_valor = df["valor"].loc[id_maximo]
         pico_data = df["data"].loc[id_maximo].strftime("%d/%m/%Y")
         
+        # Calcular as variações percentuais normais
         df["var_mensal"] = df["valor"].pct_change() * 100
         df["var_anual"] = df["valor"].pct_change(periods=12) * 100
         
+        # --- TRUQUE DE PROTEÇÃO: Substituir 'inf' e '-inf' por zero (ou por vazio) ---
+        # Usamos o método do Pandas .replace() para limpar as colunas calculadas
+        df["var_mensal"] = df["var_mensal"].replace([np.inf, -np.inf], 0)
+        df["var_anual"] = df["var_anual"].replace([np.inf, -np.inf], 0)
+        
+        # Agora pegamos os últimos valores com total segurança
         ultima_var_mensal = df["var_mensal"].iloc[-1]
         ultima_var_anual = df["var_anual"].iloc[-1]
         
