@@ -5,7 +5,7 @@ from adjustText import adjust_text
 from statsmodels.tsa.seasonal import seasonal_decompose  # Nova biblioteca estatística!
 
 # 1. Configurações de caminhos para as séries de Concessão
-pasta_dados = "dados_brutos"
+pasta_dados = "dados_brutos_sgs"
 arquivo_tt = os.path.join(pasta_dados, "Concessão_20631_CON_TOTAL.csv")
 arquivo_pf = os.path.join(pasta_dados, "Concessão_20633_CON_PF_TOTAL.csv")
 arquivo_pj = os.path.join(pasta_dados, "Concessão_20632_CON_PJ_TOTAL.csv")

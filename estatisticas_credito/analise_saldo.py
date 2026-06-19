@@ -4,7 +4,7 @@ import pandas as pd
 from adjustText import adjust_text
 
 # 1. Configurações de caminhos
-pasta_dados = "dados_brutos"
+pasta_dados = "dados_brutos_sgs"
 arquivo_tt = os.path.join(pasta_dados, "Saldo_20539_SALDO_TOTAL.csv")
 arquivo_pf = os.path.join(pasta_dados, "Saldo_20541_SALDO_PF_TOTAL.csv")
 arquivo_pj = os.path.join(pasta_dados, "Saldo_20540_SALDO_PJ_TOTAL.csv")
