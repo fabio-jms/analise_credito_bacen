@@ -3,7 +3,7 @@ import zipfile
 import pandas as pd
 
 # 1. Configurações de caminhos
-pasta_dados_scr = "dados_scr_brutos"
+pasta_dados_scr = "dados_brutos_scrdata"
 # Altere para o ano que você conseguiu baixar com sucesso no passo anterior
 nome_arquivo_zip = "scrdata_2018.zip" 
 caminho_zip = os.path.join(pasta_dados_scr, nome_arquivo_zip)

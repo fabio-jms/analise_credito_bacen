@@ -1,0 +1,183 @@
+{
+    "data_base": {
+        "tipo_tecnico": "string",
+        "conceito": "Data de fechamento do relatório do SCR (Referência: Março de 2026).",
+        "total_opcoes": 1,
+        "valores_aceitos": [
+            "2026-03-31"
+        ]
+    },
+    "uf": {
+        "tipo_tecnico": "string",
+        "conceito": "Estado da federação de contratação do crédito.",
+        "total_opcoes": 27,
+        "valores_aceitos": [
+            "AC",
+            "AL",
+            "AM",
+            "AP",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MG",
+            "MS",
+            "MT",
+            "PA",
+            "PB",
+            "PE",
+            "PI",
+            "PR",
+            "RJ",
+            "RN",
+            "RO",
+            "RR",
+            "RS",
+            "SC",
+            "SE",
+            "SP",
+            "TO"
+        ]
+    },
+    "segmento": {
+        "tipo_tecnico": "string",
+        "conceito": "Segmentação da instituição (Banco, Fintech, Cooperativa, etc.).",
+        "total_opcoes": 8,
+        "valores_aceitos": [
+            "Arrendamento",
+            "Banco",
+            "Cooperativa",
+            "Desenvolvimento/Fomento",
+            "Financeira",
+            "Fintech",
+            "Instituição de pagamento",
+            "Outros"
+        ]
+    },
+    "cliente": {
+        "tipo_tecnico": "string",
+        "conceito": "Tipo de pessoa do tomador (PF / PJ).",
+        "total_opcoes": 2,
+        "valores_aceitos": [
+            "PF",
+            "PJ"
+        ]
+    },
+    "porte": {
+        "tipo_tecnico": "string",
+        "conceito": "Porte do cliente (Faturamento/Renda).",
+        "total_opcoes": 13,
+        "valores_aceitos": [
+            "Acima de 20 salários mínimos",
+            "Até 1 salário mínimo",
+            "Grande",
+            "Indisponível",
+            "Mais de 1 a 2 salários mínimos",
+            "Mais de 10 a 20 salários mínimos",
+            "Mais de 2 a 3 salários mínimos",
+            "Mais de 3 a 5 salários mínimos",
+            "Mais de 5 a 10 salários mínimos",
+            "Micro",
+            "Médio",
+            "Pequeno",
+            "Sem rendimento"
+        ]
+    },
+    "modalidade": {
+        "tipo_tecnico": "string",
+        "conceito": "Tipo macro da operação financeira.",
+        "total_opcoes": 13,
+        "valores_aceitos": [
+            "Adiantamentos a depositantes",
+            "Direitos creditórios descontados",
+            "Empréstimos",
+            "Financiamentos",
+            "Financiamentos com interveniência",
+            "Financiamentos de infraestrutura e desenvolvimento",
+            "Financiamentos de títulos e valores mobiliários",
+            "Financiamentos imobiliários",
+            "Financiamentos rurais  (ex-financiamentos rurais e agroindustriais)",
+            "Financiamentos à exportação",
+            "Financiamentos à importação",
+            "Operações de arrendamento",
+            "Outros créditos"
+        ]
+    },
+    "submodalidade": {
+        "tipo_tecnico": "string",
+        "conceito": "Detalhamento do produto de crédito (Essencial para isolar Cartões de Crédito).",
+        "total_opcoes": 55,
+        "valores_aceitos": [
+            "Adiantamento sobre cambiais entregues",
+            "Adiantamento sobre contratos de câmbio",
+            "Adiantamentos a depositantes",
+            "Antecipação de fatura de cartão de crédito",
+            "Aquisição de bens - outros bens",
+            "Aquisição de bens - veículos automotores",
+            "Aquisição de bens com interveniência - outros bens",
+            "Aquisição de bens com interveniência - veículos autom.",
+            "Arrendamento financeiro de veículos automotores",
+            "Arrendamento financeiro exceto veículos automotores e imóveis",
+            "Arrendamento financeiro imobiliário",
+            "Arrendamento operacional",
+            "Avais e fianças honrados",
+            "Capital de giro com prazo de vencimento até 365 dias",
+            "Capital de giro com prazo de vencimento superior a 365 dias",
+            "Capital de giro com teto rotativo",
+            "Cartão de crédito - compra ou fatura parcelada pela instituição financeira emitente do cartão",
+            "Cartão de crédito - compra à vista e parcelado lojista",
+            "Cartão de crédito - compra, fatura parcelada ou saque financiado pela instituição financeira emitente do cartão",
+            "Cartão de crédito - não migrado",
+            "Cheque especial",
+            "Comercialização",
+            "Compror",
+            "Conta Garantida",
+            "Créd decorrentes de contratos de exportação-export note",
+            "Crédito pessoal - com consignação em folha de pagam.",
+            "Crédito pessoal - sem consignação em folha de pagam.",
+            "Crédito rotativo vinculado a cartão de crédito",
+            "Custeio",
+            "Desconto de cheques",
+            "Desconto de duplicatas",
+            "Devedores por compra de valores e bens",
+            "Financiamento de TVM",
+            "Financiamento de infraestrutura e desenvolvimento",
+            "Financiamento de projeto",
+            "Financiamento habitacional - SFH",
+            "Financiamento habitacional  exceto SFH",
+            "Financiamento imobiliário - empreendim, exceto habitac.",
+            "Financiamento à exportação",
+            "Financiamento à importação",
+            "Financiamentos agroindustriais",
+            "Home Equity",
+            "Industrialização",
+            "Investimento",
+            "Microcrédito",
+            "Outros com característica de crédito",
+            "Outros direitos creditórios descontados",
+            "Outros empréstimos",
+            "Outros financiamentos",
+            "Outros financiamentos com interveniência",
+            "Outros financiamentos à exportação",
+            "Outros títulos descontados",
+            "Recebíveis adquiridos",
+            "Títulos e créditos a receber",
+            "Vendor"
+        ]
+    },
+    "indexador": {
+        "tipo_tecnico": "string",
+        "conceito": "Indicador econômico que corrige o contrato.",
+        "total_opcoes": 6,
+        "valores_aceitos": [
+            "Flutuantes",
+            "Outros indexadores",
+            "Prefixado",
+            "Pós-fixado",
+            "TCR/TRFC",
+            "Índices de preços"
+        ]
+    }
+}
