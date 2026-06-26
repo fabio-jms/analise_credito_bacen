@@ -28,7 +28,6 @@ with zipfile.ZipFile(arquivo_zip_path, "r") as z:
             if 'submodalidade' not in chunk.columns or 'segmento' not in chunk.columns:
                 continue
             
-            # Limpeza rápida e agrupamento do bloco
             chunk['submodalidade'] = chunk['submodalidade'].astype(str).str.strip()
             chunk['segmento'] = chunk['segmento'].astype(str).str.strip()
             
@@ -41,60 +40,82 @@ with zipfile.ZipFile(arquivo_zip_path, "r") as z:
             blocos_agrupados.append(df_bloco)
 
 # ==============================================================================
-# 2. ENGENHARIA DE RANKING (O Segredo da Análise)
+# 2. FILTRAGEM, TRATAMENTO E REAGRUPAMENTO DOS SEGMENTOS
 # ==============================================================================
-print("Calculando o peso das carteiras e ranqueando os carros-chefes...")
+print("Tratando regras de negócio e agrupando IP + Fintech...")
 df_total = pd.concat(blocos_agrupados).groupby(['segmento', 'submodalidade']).sum().reset_index()
 
-# 2.1 Descobrir o tamanho total da carteira de CADA segmento
-tamanho_segmento = df_total.groupby('segmento')['carteira_ativa'].transform('sum')
+# Padronização de texto defensiva para a comparação
+df_total['segmento_limpo'] = df_total['segmento'].str.lower().str.strip()
 
-# 2.2 Calcular a representatividade (%) da linha dentro daquele segmento específico
-df_total['peso_no_segmento_pct'] = (df_total['carteira_ativa'] / tamanho_segmento) * 100
+# A) Remover segmentos irrelevantes para esta análise
+segmentos_remover = ['outros', 'arrendamento', 'desenvolvimento']
+df_total = df_total[~df_total['segmento_limpo'].isin(segmentos_remover)].copy()
 
-# 2.3 Rankear: Ordena por Segmento e Volume (do maior pro menor), e corta os 5 primeiros de cada!
-df_rank = df_total.sort_values(['segmento', 'carteira_ativa'], ascending=[True, False])
-top5_por_segmento = df_rank.groupby('segmento').head(5).copy()
+# B) Agrupar IP e Fintech sob a mesma nomenclatura
+mapeamento_canais = {
+    'fintech': 'Fintech + IP',
+    'ip': 'Fintech + IP',
+    'banco': 'Banco',
+    'cooperativa': 'Cooperativa',
+    'financeira': 'Financeira'
+}
+df_total['segmento_consolidado'] = df_total['segmento_limpo'].map(mapeamento_canais).fillna(df_total['segmento'])
+
+# C) Como mudamos os grupos, re-agrupamos para somar os valores de Fintech e IP que agora são o mesmo grupo
+df_consolidado = df_total.groupby(['segmento_consolidado', 'submodalidade'])['carteira_ativa'].sum().reset_index()
 
 # ==============================================================================
-# 3. CONSTRUÇÃO DA MATRIZ GRÁFICA (GRID 2x2)
+# 3. ENGENHARIA DE RANKING (Apenas nos 4 segmentos finais)
 # ==============================================================================
-print("Gerando painel visual...")
+# Calcular o tamanho total da carteira de CADA um dos 4 novos grupos
+tamanho_segmento = df_consolidado.groupby('segmento_consolidado')['carteira_ativa'].transform('sum')
+df_consolidado['peso_no_segmento_pct'] = (df_consolidado['carteira_ativa'] / tamanho_segmento) * 100
 
-# Para o gráfico não ficar gigante, vamos pegar os 4 maiores segmentos do Brasil
-top_4_segmentos = df_total.groupby('segmento')['carteira_ativa'].sum().nlargest(4).index.tolist()
+# Rankear o top 5 de cada grupo
+df_rank = df_consolidado.sort_values(['segmento_consolidado', 'carteira_ativa'], ascending=[True, False])
+top5_por_segmento = df_rank.groupby('segmento_consolidado').head(5).copy()
 
-# Prepara a tela de pintura: 2 linhas, 2 colunas
+# ==============================================================================
+# 4. CONSTRUÇÃO DA MATRIZ GRÁFICA REFINADA (GRID 2x2)
+# ==============================================================================
+print("Gerando painel visual otimizado...")
+
+# Lista ordenada dos 4 segmentos para plotagem
+segmentos_finais = ['Banco', 'Cooperativa', 'Financeira', 'Fintech + IP']
+
 fig, axes = plt.subplots(2, 2, figsize=(18, 12))
-axes = axes.flatten() # Transforma a matriz 2x2 em uma lista simples para o loop
+axes = axes.flatten()
 
-cores = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728'] # Cores diferentes para cada segmento
+# Paleta de cores cirúrgica para destacar o ecossistema digital
+cores = ['#1f77b4', '#2ca02c', '#9467bd', '#ff7f0e'] 
 
-for i, segmento in enumerate(top_4_segmentos):
+for i, segmento in enumerate(segmentos_finais):
     ax = axes[i]
     
-    # Filtra os dados apenas daquele segmento e inverte a ordem para a maior barra ficar no topo do gráfico
-    df_plot = top5_por_segmento[top5_por_segmento['segmento'] == segmento].sort_values('peso_no_segmento_pct', ascending=True)
+    # Filtra e ordena para manter o maior produto no topo do gráfico de barras horizontais
+    df_plot = top5_por_segmento[top5_por_segmento['segmento_consolidado'] == segmento].sort_values('peso_no_segmento_pct', ascending=True)
     
-    # Quebra de texto inteligente para nomes longos de submodalidades
     labels = [textwrap.fill(nome, width=40) for nome in df_plot['submodalidade']]
     
-    # Plota as barras horizontais
-    barras = ax.barh(labels, df_plot['peso_no_segmento_pct'], color=cores[i], edgecolor='black', alpha=0.8)
+    barras = ax.barh(labels, df_plot['peso_no_segmento_pct'], color=cores[i], edgecolor='black', alpha=0.85)
     
     ax.set_title(f"Carros-Chefes: {segmento.upper()}", fontsize=14, weight='bold')
-    ax.set_xlim(0, 100) # Fixa o eixo X em 100% para os 4 gráficos terem a mesma proporção visual
+    ax.set_xlim(0, 100)
     ax.set_xlabel("Peso na Carteira do Segmento (%)", fontsize=10)
     
-    # Escreve a porcentagem na ponta de cada barra
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    
     for barra in barras:
         width = barra.get_width()
-        ax.text(width + 1.5, barra.get_y() + barra.get_height()/2, f'{width:.1f}%', 
-                va='center', fontsize=10, weight='bold', color='black')
+        if width > 0.1:
+            ax.text(width + 1.5, barra.get_y() + barra.get_height()/2, f'{width:.1f}%', 
+                    va='center', fontsize=10, weight='bold', color='black')
 
-plt.suptitle("DNA de Crédito: Principais Produtos por Segmento de Instituição (Abr/26)", fontsize=18, weight='bold', y=0.96)
-plt.tight_layout(pad=3.0)
+plt.suptitle("DNA de Crédito Refinado: Principais Produtos por Segmento Otimizado (Abr/26)", fontsize=18, weight='bold', y=0.96)
+plt.tight_layout(pad=3.0, rect=[0, 0, 1, 0.95])
 
-plt.savefig("dna_produtos_por_segmento.png", dpi=300, bbox_inches='tight')
-print("Exibindo matriz gráfica...")
+plt.savefig("dna_produtos_segmentos_refinado.png", dpi=300, bbox_inches='tight')
+print("Exibindo matriz gráfica refinada...")
 plt.show()

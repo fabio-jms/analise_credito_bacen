@@ -1,0 +1,42 @@
+[
+    {
+        "novo_grupo": "Banco",
+        "como_o_bacen_agrupou": "Bancos múltiplos, bancos comerciais, de investimento, de câmbio e a Caixa Econômica Federal.",
+        "onde_elas_ficavam_antes": "Concentrados massivamente no S1, S2 e S3 (e alguns bancos menores no S4)."
+    },
+    {
+        "novo_grupo": "Cooperativa",
+        "como_o_bacen_agrupou": "Todas as cooperativas de crédito (singulares, centrais e confederações).",
+        "onde_elas_ficavam_antes": "Estavam espalhadas principalmente entre S4 e S5."
+    },
+    {
+        "novo_grupo": "Financeira",
+        "como_o_bacen_agrupou": "Sociedades de Crédito, Financiamento e Investimento (as tradicionais 'financeiras').",
+        "onde_elas_ficavam_antes": "Ficavam majoritariamente no S4."
+    },
+    {
+        "novo_grupo": "Fintech",
+        "como_o_bacen_agrupou": "As Sociedades de Crédito Direto (SCD) e Sociedades de Empréstimo entre Pessoas (SEP).",
+        "onde_elas_ficavam_antes": "Estavam enquadradas no S5 (porte menor/simplificado)."
+    },
+    {
+        "novo_grupo": "Instituição de pagamento",
+        "como_o_bacen_agrupou": "Instituições de Pagamento (IP) autorizadas que operam crédito (ex: emissores de moeda eletrônica/cartão).",
+        "onde_elas_ficavam_antes": "Maioritariamente fora da segmentação bancária tradicional ou classificadas no S5."
+    },
+    {
+        "novo_grupo": "Desenvolvimento/Fomento",
+        "como_o_bacen_agrupou": "Bancos de desenvolvimento (ex: BNDES) e Agências de Fomento estaduais.",
+        "onde_elas_ficavam_antes": "Distribuídos entre S2 a S5 a depender do tamanho dos ativos."
+    },
+    {
+        "novo_grupo": "Arrendamento",
+        "como_o_bacen_agrupou": "Sociedades de arrendamento mercantil (leasing).",
+        "onde_elas_ficavam_antes": "Majoritariamente no S4 ou S5."
+    },
+    {
+        "novo_grupo": "Outros",
+        "como_o_bacen_agrupou": "Companhias Hipotecárias, Associações de Poupança e Empréstimo (APEs) e Sociedades de Crédito ao Microempreendedor.",
+        "onde_elas_ficavam_antes": "Ficavam no S4 ou S5."
+    }
+]
