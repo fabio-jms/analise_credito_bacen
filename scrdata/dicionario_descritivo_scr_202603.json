@@ -65,6 +65,43 @@
             "PJ"
         ]
     },
+    "cnae_ocupacao": {
+        "tipo_tecnico": "string",
+        "conceito": "Classificação CNAE ocupação",
+        "total_opcoes": 30,
+        "valores_aceitos": [
+            "Administração pública, defesa e seguridade social",
+            "Agricultura, pecuária, produção florestal, pesca e aquicultura",
+            "Alojamento e alimentação",
+            "Aposentado/pensionista",
+            "Artes, cultura, esporte e recreação",
+            "Atividades administrativas e serviços complementares",
+            "Atividades financeiras, de seguros e serviços relacionados",
+            "Atividades imobiliárias",
+            "Atividades profissionais, científicas e técnicas",
+            "Autônomo",
+            "Comércio; reparação de veículos automotores e motocicletas",
+            "Construção",
+            "Educação",
+            "Eletricidade e gás",
+            "Empregado de empresa privada",
+            "Empregado de entidades sem fins lucrativos",
+            "Empresário",
+            "Indústrias de transformação",
+            "Indústrias extrativas",
+            "Informação e comunicação",
+            "MEI",
+            "Não informados",
+            "Organismos internacionais e outras instituições extraterritoriais",
+            "Outras atividades de serviços",
+            "Outros",
+            "Saúde humana e serviços sociais",
+            "Servidor ou empregado público",
+            "Serviços domésticos",
+            "Transporte, armazenagem e correio",
+            "Água, esgoto, atividades de gestão de resíduos e descontaminação"
+        ]
+    },
     "porte": {
         "tipo_tecnico": "string",
         "conceito": "Porte do cliente (Faturamento/Renda).",

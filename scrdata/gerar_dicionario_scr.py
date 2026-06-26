@@ -47,7 +47,7 @@ with zipfile.ZipFile(arquivo_zip_2026, "r") as z:
     print(f"Processando arquivo completo por blocos: {csv_alvo}...")
 
     # Inicializamos um dicionário de conjuntos (sets) vazios para acumular as categorias
-    colunas_para_dicionario = ['data_base', 'uf', 'segmento', 'cliente', 'porte', 'modalidade', 'submodalidade', 'indexador']
+    colunas_para_dicionario = ['data_base', 'uf', 'segmento', 'cliente', 'cnae_ocupacao', 'porte', 'modalidade', 'submodalidade', 'indexador']
     categorias_acumuladas = {col: set() for col in colunas_para_dicionario}
 
     with z.open(csv_alvo) as f:
@@ -78,6 +78,7 @@ descricoes_macro = {
     "uf": "Estado da federação de contratação do crédito.",
     "segmento": "Segmentação da instituição (Banco, Fintech, Cooperativa, etc.).",
     "cliente": "Tipo de pessoa do tomador (PF / PJ).",
+    "cnae_ocupacao": "Classificação CNAE ocupação",
     "porte": "Porte do cliente (Faturamento/Renda).",
     "modalidade": "Tipo macro da operação financeira.",
     "submodalidade": "Detalhamento do produto de crédito (Essencial para isolar Cartões de Crédito).",
