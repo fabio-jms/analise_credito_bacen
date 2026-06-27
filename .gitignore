@@ -6,4 +6,4 @@ execucao.log
 estatisticas_credito/codigos_series_bacen.csv
 # --- Dados Contábeis (IFData) ---
 ifdata/dados_ifdata_brutos/
-ifdata/ifdata_pf_carteira_limpa.csv
+ifdata/*.csv
